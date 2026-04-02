@@ -5,6 +5,9 @@
 [![npm downloads](https://img.shields.io/npm/dw/opencode-antigravity-auth.svg)](https://www.npmjs.com/package/opencode-antigravity-auth)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![X (Twitter)](https://img.shields.io/badge/X-@dopesalmon-000000?style=flat&logo=x)](https://x.com/dopesalmon)
+[![Build](https://github.com/vagnervrds/opencode-antigravity-auth/actions/workflows/build.yml/badge.svg)](https://github.com/vagnervrds/opencode-antigravity-auth/actions/workflows/build.yml)
+
+> **Windows users:** This fork fixes a Bun ESM compatibility bug that prevents the plugin from loading on Windows OpenCode desktop. See [Windows Installation](#windows-installation) below.
 
 Enable Opencode to authenticate against **Antigravity** (Google's IDE) via OAuth so you can use Antigravity rate limits and access models like `gemini-3-pro` and `claude-opus-4-6-thinking` with your Google credentials.
 
@@ -38,6 +41,25 @@ Enable Opencode to authenticate against **Antigravity** (Google's IDE) via OAuth
 > **Recommendation:** Use an established Google account that you don't rely on for critical services. Avoid creating new accounts specifically for this plugin.
 
 </details>
+
+---
+
+## Windows Installation
+
+If you are using the **OpenCode desktop app on Windows**, the original plugin fails to load due to a Bun ESM incompatibility with `proper-lockfile`. This fork fixes that.
+
+Run the automated installer in PowerShell:
+
+```powershell
+irm https://raw.githubusercontent.com/vagnervrds/opencode-antigravity-auth/fix/bun-esm-proper-lockfile-compat/install.ps1 | iex
+```
+
+Or download [`install.ps1`](install.ps1) and run it manually. The script will:
+- Configure `opencode.json` with the plugin and your chosen models
+- Install and patch the plugin automatically
+- Guide you through Google OAuth
+
+> Fix discovered with [Claude AI](https://claude.ai) (claude-sonnet-4-6).
 
 ---
 
