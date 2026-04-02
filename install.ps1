@@ -4,13 +4,15 @@
 
 $ErrorActionPreference = "Stop"
 
+$INSTALLER_BUILD = 3
+
 function Write-Step($msg)  { Write-Host "`n==> $msg" -ForegroundColor Cyan }
 function Write-Ok($msg)    { Write-Host "    OK: $msg" -ForegroundColor Green }
 function Write-Warn($msg)  { Write-Host "    AVISO: $msg" -ForegroundColor Yellow }
 function Write-Fail($msg)  { Write-Host "    ERRO: $msg" -ForegroundColor Red; exit 1 }
 
 Write-Host ""
-Write-Host "  opencode-antigravity-auth — instalador Windows" -ForegroundColor Magenta
+Write-Host "  opencode-antigravity-auth — instalador Windows (build $INSTALLER_BUILD)" -ForegroundColor Magenta
 Write-Host "  ================================================" -ForegroundColor Magenta
 Write-Host ""
 
