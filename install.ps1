@@ -1,10 +1,10 @@
-﻿# install.ps1 - Instalador do opencode-antigravity-auth para Windows
+# install.ps1 - Instalador do opencode-antigravity-auth para Windows
 # Corrige automaticamente a incompatibilidade ESM/Bun do proper-lockfile
 # Descoberto com ajuda do Claude AI (claude-sonnet-4-6)
 
 $ErrorActionPreference = "Stop"
 
-$INSTALLER_BUILD = 3
+$INSTALLER_BUILD = 4
 
 function Write-Step($msg)  { Write-Host "`n==> $msg" -ForegroundColor Cyan }
 function Write-Ok($msg)    { Write-Host "    OK: $msg" -ForegroundColor Green }
@@ -35,7 +35,45 @@ if (-not (Test-Path $configDir)) {
 }
 Write-Ok "Config em: $configDir"
 
-# ---- 3. Perguntar conta Google ----------------------------------------------------------------------------------------------------
+# ---- 3. Limpar credenciais existentes (opcional) -----------------------------------------------------------------------
+Write-Step "Limpeza de credenciais existentes..."
+Write-Host ""
+Write-Host "  Deseja remover credenciais antigas antes de instalar?" -ForegroundColor White
+Write-Host "  (Recomendado se voce teve erros de autenticacao ou 403)" -ForegroundColor Yellow
+Write-Host ""
+Write-Host "  [S] Sim - limpar tudo e comecar do zero (recomendado)"
+Write-Host "  [N] Nao - manter credenciais existentes"
+Write-Host ""
+$cleanChoice = Read-Host "  Opcao [S/N]"
+
+if ($cleanChoice -match "^[Ss]") {
+    $accountsFile = "$configDir\antigravity-accounts.json"
+    $authFile     = "$env:LOCALAPPDATA\OpenCode\auth.json"
+    $authFile2    = "$env:USERPROFILE\.local\share\opencode\auth.json"
+    $cacheDir     = "$env:USERPROFILE\.cache\opencode"
+
+    if (Test-Path $accountsFile) {
+        Remove-Item $accountsFile -Force
+        Write-Ok "Removido: $accountsFile"
+    }
+    if (Test-Path $authFile) {
+        Remove-Item $authFile -Force
+        Write-Ok "Removido: $authFile"
+    }
+    if (Test-Path $authFile2) {
+        Remove-Item $authFile2 -Force
+        Write-Ok "Removido: $authFile2"
+    }
+    if (Test-Path $cacheDir) {
+        Remove-Item $cacheDir -Recurse -Force
+        Write-Ok "Cache limpo: $cacheDir"
+    }
+    Write-Ok "Credenciais removidas - instalacao limpa"
+} else {
+    Write-Ok "Credenciais mantidas"
+}
+
+# ---- 4. Perguntar conta Google ----------------------------------------------------------------------------------------------------
 Write-Step "Conta Google para autenticacao..."
 Write-Host ""
 Write-Host "  Qual conta Google voce vai usar? (ex: seuemail@gmail.com)"
@@ -44,7 +82,41 @@ Write-Host ""
 $googleEmail = Read-Host "  E-mail"
 if (-not $googleEmail) { Write-Fail "E-mail nao informado." }
 
-# ---- 4. Perguntar modelos --------------------------------------------------------------------------------------------------------------
+# ---- 5. Verificacao da conta Google (IMPORTANTE) ------------------------------------------------------------------------
+Write-Step "Verificacao da conta Google - PASSO OBRIGATORIO"
+Write-Host ""
+Write-Host "  IMPORTANTE: Antes de continuar, voce PRECISA verificar sua conta" -ForegroundColor Yellow
+Write-Host "  Google para o Gemini Code Assist. Sem isso, voce recebera erro 403." -ForegroundColor Yellow
+Write-Host ""
+Write-Host "  Por que isso e necessario?" -ForegroundColor White
+Write-Host "  O Google exige que a API 'Gemini for Google Cloud' esteja ativa"
+Write-Host "  na sua conta antes de aceitar requisicoes do Antigravity."
+Write-Host ""
+Write-Host "  Opcao 1 - Antigravity IDE (mais facil, recomendada):" -ForegroundColor Green
+Write-Host "    1. Abra o Antigravity IDE (baixe em antigravity.ai se nao tiver)"
+Write-Host "    2. Faca login com $googleEmail"
+Write-Host "    3. Aceite os termos do Gemini Code Assist quando solicitado"
+Write-Host "    4. Aguarde aparecer sugestoes de codigo (prova que funcionou)"
+Write-Host "    5. Feche o Antigravity"
+Write-Host ""
+Write-Host "  Opcao 2 - VS Code com Gemini Code Assist:" -ForegroundColor Cyan
+Write-Host "    1. Instale a extensao 'Gemini Code Assist' no VS Code"
+Write-Host "    2. Faca login com $googleEmail"
+Write-Host "    3. Aceite os termos quando solicitado"
+Write-Host ""
+Write-Host "  Opcao 3 - Google Cloud Console (avancado):" -ForegroundColor DarkGray
+Write-Host "    1. Acesse console.cloud.google.com"
+Write-Host "    2. Busque por 'Cloud AI Companion API'"
+Write-Host "    3. Clique em 'Enable' para o seu projeto"
+Write-Host ""
+$verified = Read-Host "  Ja fez a verificacao? [S/N]"
+if ($verified -notmatch "^[Ss]") {
+    Write-Host ""
+    Write-Warn "Continuando sem verificacao - voce pode receber erro 403 mais tarde."
+    Write-Warn "Se isso acontecer, faca a verificacao e execute o instalador novamente."
+}
+
+# ---- 6. Perguntar modelos --------------------------------------------------------------------------------------------------------------
 Write-Step "Selecao de modelos..."
 Write-Host ""
 Write-Host "  Quais modelos deseja configurar?"
@@ -122,7 +194,7 @@ $selectedModels = switch ($modelChoice) {
     default { $allModels }
 }
 
-# ---- 5. Criar/atualizar opencode.json ------------------------------------------------------------------------------------
+# ---- 7. Criar/atualizar opencode.json ------------------------------------------------------------------------------------
 Write-Step "Criando opencode.json..."
 
 $opencodeJson = "$configDir\opencode.json"
@@ -155,7 +227,7 @@ $selectedModels
 Set-Content -Path $opencodeJson -Value $newConfig -Encoding UTF8
 Write-Ok "opencode.json criado"
 
-# ---- 6. Instalar plugin via npm ------------------------------------------------------------------------------------------------
+# ---- 8. Instalar plugin via npm ------------------------------------------------------------------------------------------------
 Write-Step "Instalando plugin via npm..."
 
 $pkgJson = "$configDir\package.json"
@@ -173,7 +245,7 @@ try {
     Pop-Location
 }
 
-# ---- 7. Abrir OpenCode para instalar no cache --------------------------------------------------------------------
+# ---- 9. Abrir OpenCode para instalar no cache --------------------------------------------------------------------
 Write-Step "Instalacao no cache do OpenCode..."
 Write-Host ""
 Write-Host "  Agora voce precisa:"
@@ -185,7 +257,7 @@ Write-Host "  (Isso instala o plugin no cache interno do OpenCode)"
 Write-Host ""
 Read-Host "  Pressione ENTER quando tiver aberto E fechado o OpenCode"
 
-# ---- 8. Aplicar fix ESM/Bun --------------------------------------------------------------------------------------------------------
+# ---- 10. Aplicar fix ESM/Bun --------------------------------------------------------------------------------------------------------
 Write-Step "Aplicando correcao de compatibilidade ESM/Bun..."
 
 $cacheDir = "$env:USERPROFILE\.cache\opencode\node_modules\opencode-antigravity-auth"
@@ -199,14 +271,10 @@ if (Test-Path $storageJs) {
         Write-Ok "Correcao ja aplicada anteriormente"
     } else {
         # Correcao 1: import default
-        $content = $content -replace 'import lockfile from "proper-lockfile";', `
-            ('// proper-lockfile replaced: Bun ESM incompatibility fix (github.com/vagnervrds/opencode-antigravity-auth)' + "`n" + `
-            'const lockfile = { lock: async () => async () => {} };')
+        $content = $content -replace 'import lockfile from "proper-lockfile";', ('// proper-lockfile replaced: Bun ESM incompatibility fix (github.com/vagnervrds/opencode-antigravity-auth)' + "`n" + 'const lockfile = { lock: async () => async () => {} };')
 
         # Correcao 2: import * as (variante alternativa que pode aparecer)
-        $content = $content -replace 'import \* as lockfileModule from "proper-lockfile";[\r\n]+const lockfile = lockfileModule\.default \?\? lockfileModule;', `
-            ('// proper-lockfile replaced: Bun ESM incompatibility fix (github.com/vagnervrds/opencode-antigravity-auth)' + "`n" + `
-            'const lockfile = { lock: async () => async () => {} };')
+        $content = $content -replace 'import \* as lockfileModule from "proper-lockfile";[\r\n]+const lockfile = lockfileModule\.default \?\? lockfileModule;', ('// proper-lockfile replaced: Bun ESM incompatibility fix (github.com/vagnervrds/opencode-antigravity-auth)' + "`n" + 'const lockfile = { lock: async () => async () => {} };')
 
         Set-Content -Path $storageJs -Value $content -Encoding UTF8 -NoNewline
         Write-Ok "Correcao aplicada em $storageJs"
@@ -222,7 +290,7 @@ if (Test-Path $storageJs) {
 if (Test-Path `$storageJs) {
     `$c = Get-Content `$storageJs -Raw
     if (`$c -notmatch "proper-lockfile replaced") {
-        `$c = `$c -replace 'import lockfile from "proper-lockfile";', "// proper-lockfile replaced`nconst lockfile = { lock: async () => async () => {} };"
+        `$c = `$c -replace 'import lockfile from "proper-lockfile";', ("// proper-lockfile replaced`nconst lockfile = { lock: async () => async () => {} };")
         Set-Content -Path `$storageJs -Value `$c -Encoding UTF8 -NoNewline
         Write-Host "Fix aplicado com sucesso!" -ForegroundColor Green
     } else {
@@ -236,36 +304,27 @@ if (Test-Path `$storageJs) {
     Write-Warn "Rode-o apos abrir e fechar o OpenCode uma vez"
 }
 
-# ---- 9. Autenticacao Google --------------------------------------------------------------------------------------------------------
+# ---- 11. Autenticacao Google --------------------------------------------------------------------------------------------------------
 Write-Step "Autenticacao com o Google..."
 Write-Host ""
-Write-Host "  Para ativar o Gemini Code Assist na sua conta Google ($googleEmail):"
+Write-Host "  Vamos fazer o login com $googleEmail no OpenCode."
 Write-Host ""
-Write-Host "  IMPORTANTE: Antes de fazer login no OpenCode, voce PRECISA verificar"
-Write-Host "  a conta no Antigravity IDE ou VS Code com Gemini Code Assist."
+Write-Host "  Na tela de login, selecione:"
+Write-Host "  'Google' -> 'OAuth with Google (Antigravity)'"
 Write-Host ""
-Write-Host "  Opcao recomendada - Antigravity IDE:"
-Write-Host "    1. Abra o Antigravity (esta instalado no seu PC)"
-Write-Host "    2. Faca login com $googleEmail"
-Write-Host "    3. Aceite os termos do Gemini Code Assist"
-Write-Host "    4. Feche o Antigravity"
+Write-Host "  LEMBRE-SE: Se receber erro 403 'Verify your account' apos o login," -ForegroundColor Yellow
+Write-Host "  voce precisa verificar a conta no Antigravity IDE primeiro (passo 5)." -ForegroundColor Yellow
 Write-Host ""
-Write-Host "  Opcao alternativa - VS Code:"
-Write-Host "    1. Instale a extensao 'Gemini Code Assist' no VS Code"
-Write-Host "    2. Faca login com $googleEmail e aceite os termos"
-Write-Host ""
-$doLogin = Read-Host "  Ja verificou a conta? Quer fazer o login agora? [S/N]"
+$doLogin = Read-Host "  Quer fazer o login agora? [S/N]"
 
 if ($doLogin -match "^[Ss]") {
     Write-Host ""
     Write-Host "  Abrindo tela de login..." -ForegroundColor Cyan
-    Write-Host "  Selecione 'Google' -> 'OAuth with Google (Antigravity)'"
-    Write-Host ""
     Start-Sleep -Seconds 2
     & $opencodeExe auth login
 }
 
-# ---- 10. Conclusao --------------------------------------------------------------------------------------------------------------------------
+# ---- 12. Conclusao --------------------------------------------------------------------------------------------------------------------------
 Write-Host ""
 Write-Host "  ================================================" -ForegroundColor Magenta
 Write-Host "  Instalacao concluida!" -ForegroundColor Green
@@ -275,8 +334,21 @@ Write-Host "  1. Abra o OpenCode"
 Write-Host "  2. Selecione um modelo como 'google/antigravity-gemini-3-flash'"
 Write-Host "  3. Envie uma mensagem para testar"
 Write-Host ""
-Write-Host "  Se receber '403 Verify your account': verifique a conta no"
-Write-Host "  Antigravity IDE primeiro (veja instrucoes acima)"
+Write-Host "  Solucao de problemas:" -ForegroundColor Yellow
+Write-Host ""
+Write-Host "  Erro '403 Verify your account':"
+Write-Host "    -> Abra o Antigravity IDE, faca login com $googleEmail"
+Write-Host "    -> Aceite os termos do Gemini Code Assist"
+Write-Host "    -> Execute este instalador novamente (opcao S na limpeza)"
+Write-Host ""
+Write-Host "  Erro '403 Gemini for Google Cloud API has not been used':"
+Write-Host "    -> Acesse console.cloud.google.com"
+Write-Host "    -> Busque por 'Cloud AI Companion API' e clique em Enable"
+Write-Host "    -> OU use o Antigravity IDE para ativar automaticamente"
+Write-Host ""
+Write-Host "  Erro 'No Antigravity accounts configured':"
+Write-Host "    -> Execute este instalador novamente (opcao S na limpeza)"
+Write-Host "    -> Certifique-se de fazer login com 'OAuth with Google (Antigravity)'"
 Write-Host ""
 Write-Host "  Problemas? github.com/vagnervrds/opencode-antigravity-auth" -ForegroundColor Cyan
 Write-Host "  Fix descoberto com Claude AI (claude-sonnet-4-6)" -ForegroundColor DarkGray
