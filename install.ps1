@@ -198,13 +198,13 @@ if (Test-Path $storageJs) {
     } else {
         # Correcao 1: import default
         $content = $content -replace 'import lockfile from "proper-lockfile";', `
-            '// proper-lockfile replaced: Bun ESM incompatibility fix (github.com/vagnervrds/opencode-antigravity-auth)' + "`n" + `
-            'const lockfile = { lock: async () => async () => {} };'
+            ('// proper-lockfile replaced: Bun ESM incompatibility fix (github.com/vagnervrds/opencode-antigravity-auth)' + "`n" + `
+            'const lockfile = { lock: async () => async () => {} };')
 
         # Correcao 2: import * as (variante alternativa que pode aparecer)
         $content = $content -replace 'import \* as lockfileModule from "proper-lockfile";[\r\n]+const lockfile = lockfileModule\.default \?\? lockfileModule;', `
-            '// proper-lockfile replaced: Bun ESM incompatibility fix (github.com/vagnervrds/opencode-antigravity-auth)' + "`n" + `
-            'const lockfile = { lock: async () => async () => {} };'
+            ('// proper-lockfile replaced: Bun ESM incompatibility fix (github.com/vagnervrds/opencode-antigravity-auth)' + "`n" + `
+            'const lockfile = { lock: async () => async () => {} };')
 
         Set-Content -Path $storageJs -Value $content -Encoding UTF8 -NoNewline
         Write-Ok "Correcao aplicada em $storageJs"
