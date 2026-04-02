@@ -1,4 +1,4 @@
-# install.ps1 — Instalador do opencode-antigravity-auth para Windows
+﻿# install.ps1 - Instalador do opencode-antigravity-auth para Windows
 # Corrige automaticamente a incompatibilidade ESM/Bun do proper-lockfile
 # Descoberto com ajuda do Claude AI (claude-sonnet-4-6)
 
@@ -12,11 +12,11 @@ function Write-Warn($msg)  { Write-Host "    AVISO: $msg" -ForegroundColor Yello
 function Write-Fail($msg)  { Write-Host "    ERRO: $msg" -ForegroundColor Red; exit 1 }
 
 Write-Host ""
-Write-Host "  opencode-antigravity-auth — instalador Windows (build $INSTALLER_BUILD)" -ForegroundColor Magenta
+Write-Host "  opencode-antigravity-auth - instalador Windows (build $INSTALLER_BUILD)" -ForegroundColor Magenta
 Write-Host "  ================================================" -ForegroundColor Magenta
 Write-Host ""
 
-# ── 1. Verificar OpenCode ──────────────────────────────────────────────────────
+# ---- 1. Verificar OpenCode ------------------------------------------------------------------------------------------------------------
 Write-Step "Verificando instalacao do OpenCode..."
 
 $opencodeExe = "$env:LOCALAPPDATA\OpenCode\opencode-cli.exe"
@@ -26,7 +26,7 @@ if (-not (Test-Path $opencodeExe)) {
 $version = & $opencodeExe --version 2>&1
 Write-Ok "OpenCode $version encontrado"
 
-# ── 2. Verificar/criar pasta de config ────────────────────────────────────────
+# ---- 2. Verificar/criar pasta de config --------------------------------------------------------------------------------
 Write-Step "Configurando pasta do OpenCode..."
 
 $configDir = "$env:USERPROFILE\.config\opencode"
@@ -35,7 +35,7 @@ if (-not (Test-Path $configDir)) {
 }
 Write-Ok "Config em: $configDir"
 
-# ── 3. Perguntar conta Google ──────────────────────────────────────────────────
+# ---- 3. Perguntar conta Google ----------------------------------------------------------------------------------------------------
 Write-Step "Conta Google para autenticacao..."
 Write-Host ""
 Write-Host "  Qual conta Google voce vai usar? (ex: seuemail@gmail.com)"
@@ -44,11 +44,11 @@ Write-Host ""
 $googleEmail = Read-Host "  E-mail"
 if (-not $googleEmail) { Write-Fail "E-mail nao informado." }
 
-# ── 4. Perguntar modelos ───────────────────────────────────────────────────────
+# ---- 4. Perguntar modelos --------------------------------------------------------------------------------------------------------------
 Write-Step "Selecao de modelos..."
 Write-Host ""
 Write-Host "  Quais modelos deseja configurar?"
-Write-Host "  [1] Todos (Gemini 3 Pro/Flash + Claude Opus/Sonnet) — Recomendado"
+Write-Host "  [1] Todos (Gemini 3 Pro/Flash + Claude Opus/Sonnet) - Recomendado"
 Write-Host "  [2] Apenas Gemini (Gemini 3 Pro e Flash)"
 Write-Host "  [3] Apenas Claude (Opus 4.6 Thinking e Sonnet 4.6)"
 Write-Host ""
@@ -122,7 +122,7 @@ $selectedModels = switch ($modelChoice) {
     default { $allModels }
 }
 
-# ── 5. Criar/atualizar opencode.json ──────────────────────────────────────────
+# ---- 5. Criar/atualizar opencode.json ------------------------------------------------------------------------------------
 Write-Step "Criando opencode.json..."
 
 $opencodeJson = "$configDir\opencode.json"
@@ -132,9 +132,9 @@ $existingContent = @{}
 if (Test-Path $opencodeJson) {
     try {
         $existingContent = Get-Content $opencodeJson -Raw | ConvertFrom-Json -AsHashtable
-        Write-Warn "opencode.json existente encontrado — mesclando configuracoes"
+        Write-Warn "opencode.json existente encontrado - mesclando configuracoes"
     } catch {
-        Write-Warn "opencode.json existente invalido — sera substituido"
+        Write-Warn "opencode.json existente invalido - sera substituido"
     }
 }
 
@@ -155,7 +155,7 @@ $selectedModels
 Set-Content -Path $opencodeJson -Value $newConfig -Encoding UTF8
 Write-Ok "opencode.json criado"
 
-# ── 6. Instalar plugin via npm ────────────────────────────────────────────────
+# ---- 6. Instalar plugin via npm ------------------------------------------------------------------------------------------------
 Write-Step "Instalando plugin via npm..."
 
 $pkgJson = "$configDir\package.json"
@@ -168,12 +168,12 @@ try {
     npm install opencode-antigravity-auth@latest --save 2>&1 | Out-Null
     Write-Ok "Plugin instalado em $configDir\node_modules"
 } catch {
-    Write-Warn "npm install falhou — o OpenCode tentara instalar automaticamente ao abrir"
+    Write-Warn "npm install falhou - o OpenCode tentara instalar automaticamente ao abrir"
 } finally {
     Pop-Location
 }
 
-# ── 7. Abrir OpenCode para instalar no cache ──────────────────────────────────
+# ---- 7. Abrir OpenCode para instalar no cache --------------------------------------------------------------------
 Write-Step "Instalacao no cache do OpenCode..."
 Write-Host ""
 Write-Host "  Agora voce precisa:"
@@ -185,7 +185,7 @@ Write-Host "  (Isso instala o plugin no cache interno do OpenCode)"
 Write-Host ""
 Read-Host "  Pressione ENTER quando tiver aberto E fechado o OpenCode"
 
-# ── 8. Aplicar fix ESM/Bun ────────────────────────────────────────────────────
+# ---- 8. Aplicar fix ESM/Bun --------------------------------------------------------------------------------------------------------
 Write-Step "Aplicando correcao de compatibilidade ESM/Bun..."
 
 $cacheDir = "$env:USERPROFILE\.cache\opencode\node_modules\opencode-antigravity-auth"
@@ -236,7 +236,7 @@ if (Test-Path `$storageJs) {
     Write-Warn "Rode-o apos abrir e fechar o OpenCode uma vez"
 }
 
-# ── 9. Autenticacao Google ────────────────────────────────────────────────────
+# ---- 9. Autenticacao Google --------------------------------------------------------------------------------------------------------
 Write-Step "Autenticacao com o Google..."
 Write-Host ""
 Write-Host "  Para ativar o Gemini Code Assist na sua conta Google ($googleEmail):"
@@ -244,13 +244,13 @@ Write-Host ""
 Write-Host "  IMPORTANTE: Antes de fazer login no OpenCode, voce PRECISA verificar"
 Write-Host "  a conta no Antigravity IDE ou VS Code com Gemini Code Assist."
 Write-Host ""
-Write-Host "  Opcao recomendada — Antigravity IDE:"
+Write-Host "  Opcao recomendada - Antigravity IDE:"
 Write-Host "    1. Abra o Antigravity (esta instalado no seu PC)"
 Write-Host "    2. Faca login com $googleEmail"
 Write-Host "    3. Aceite os termos do Gemini Code Assist"
 Write-Host "    4. Feche o Antigravity"
 Write-Host ""
-Write-Host "  Opcao alternativa — VS Code:"
+Write-Host "  Opcao alternativa - VS Code:"
 Write-Host "    1. Instale a extensao 'Gemini Code Assist' no VS Code"
 Write-Host "    2. Faca login com $googleEmail e aceite os termos"
 Write-Host ""
@@ -265,7 +265,7 @@ if ($doLogin -match "^[Ss]") {
     & $opencodeExe auth login
 }
 
-# ── 10. Conclusao ─────────────────────────────────────────────────────────────
+# ---- 10. Conclusao --------------------------------------------------------------------------------------------------------------------------
 Write-Host ""
 Write-Host "  ================================================" -ForegroundColor Magenta
 Write-Host "  Instalacao concluida!" -ForegroundColor Green
