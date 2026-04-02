@@ -315,6 +315,12 @@ Write-Host ""
 Write-Host "  LEMBRE-SE: Se receber erro 403 'Verify your account' apos o login," -ForegroundColor Yellow
 Write-Host "  voce precisa verificar a conta no Antigravity IDE primeiro (passo 5)." -ForegroundColor Yellow
 Write-Host ""
+Write-Host "  DICA - Project ID: quando o login perguntar 'Project ID'," -ForegroundColor Cyan
+Write-Host "  deixe em BRANCO e pressione ENTER (a menos que voce saiba" -ForegroundColor Cyan
+Write-Host "  exatamente qual project ID usar e ja tenha a API ativada nele)." -ForegroundColor Cyan
+Write-Host "  Preencher um Project ID incorreto causa erro 403 com a mensagem:" -ForegroundColor Cyan
+Write-Host "  'Gemini for Google Cloud API has not been used in project...'." -ForegroundColor Cyan
+Write-Host ""
 $doLogin = Read-Host "  Quer fazer o login agora? [S/N]"
 
 if ($doLogin -match "^[Ss]") {
@@ -345,6 +351,7 @@ Write-Host "  Erro '403 Gemini for Google Cloud API has not been used':"
 Write-Host "    -> Acesse console.cloud.google.com"
 Write-Host "    -> Busque por 'Cloud AI Companion API' e clique em Enable"
 Write-Host "    -> OU use o Antigravity IDE para ativar automaticamente"
+Write-Host "    -> OU refaca o login deixando o Project ID em BRANCO"
 Write-Host ""
 Write-Host "  Erro 'No Antigravity accounts configured':"
 Write-Host "    -> Execute este instalador novamente (opcao S na limpeza)"
