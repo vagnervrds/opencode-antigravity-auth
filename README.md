@@ -702,11 +702,15 @@ See the full [Troubleshooting Guide](docs/TROUBLESHOOTING.md) for solutions to c
 
 ---
 
-## Support
+## Support / Apoio
 
-If this plugin helps you, consider supporting its maintenance:
+**PT 🇧🇷** — Este fork e o fix de compatibilidade com Windows foram descobertos gastando tokens de IA — que, convenhamos, não são baratos. Se isso te salvou horas de dor de cabeça, considera pagar um café (ou pelo menos metade de um token do Claude Opus) ☕🤖
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/S6S81QBOIR)
+**EN 🇺🇸** — This fork and the Windows compatibility fix were discovered burning AI tokens — which, let's be honest, aren't cheap. If this saved you hours of headache, consider buying me a coffee (or at least half a Claude Opus token) ☕🤖
+
+[![Donate with Stripe](https://img.shields.io/badge/Donate-Stripe-635BFF?style=for-the-badge&logo=stripe&logoColor=white)](https://buy.stripe.com/test_14AaEX7Ic7odgLc2nB5Vu00)
+
+> Any amount helps keep the tokens running and the project alive. Thank you! / Qualquer valor ajuda. Obrigado!
 
 ---
 
