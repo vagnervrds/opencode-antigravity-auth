@@ -1,0 +1,97 @@
+{
+  "timestamp": "2026-04-03T15:44:36.956124",
+  "database": {
+    "timestamp": "2026-04-03T15:44:36.953451",
+    "source": "sqlite_database",
+    "data": {
+      "jetskiStateSync.agentManagerInitState": "*\u0002(\u00032\u0003\n\u0002ya29.a0AUMWg_LgGXUr-wl8akWhCLMSQpz5eXvAN35v7tbntkuGW7eukFQTzH0SzhPg3_gcU1dowtDO4otbv4-1DWBu3iZCCkpPxDkOdGb1h5f8uizTtP4xc0vYTkZbD4-_jvvrDNGdwjkjDs-6fFWk_H72TA6RFVQPe4qPB_Zqsi0cgupZBt8hdkGcl6n20bY91QhT24hOv5Tf8oUjfkMaCgYKAYcSARESFQHGX2Mi1RBu8FB8v1YcKlMUSWbZ7A0214\u0012\u0006Bearer\u001ag1//0h1C_N8H-gStcCgYIARAAGBESNwF-L9IrdL7ZsIEsZjvIM0cg3b_zmH9ALt36Ufib94Wo6fmWzaymBPdc86dLBwYyVuEvQ199Auo\"\u0006\b§Ì\u0006:\u0000J\u0002\b\u0000R4\n$1b5759a0-6b3d-40e8-ab19-14b366f6d31a\u0012\f\bºåëÊ\u0006\u0010À÷¥\u0001R4\n$4d542b33-af38-4882-9add-3dfe076c3f3a\u0012\f\bìÖìÊ\u0006\u0010ÀÎòî\u0001R3\n$8f7e8a8d-c540-43f4-b428-d7bb4c9a3838\u0012\u000b\búßìÊ\u0006\u0010¼ÞWR3\n$5ced561a-057d-4148-918c-d9c591f52900\u0012\u000b\b«ÇôÊ\u0006\u0010ï+R4\n$5eb2c7b2-8c14-4f61-aecf-1c4e8acaff6a\u0012\f\bÌôÊ\u0006\u0010Àô¿Ù\u0003R3\n$64eb2d77-7a24-4381-b350-ddc4db25d325\u0012\u000b\bÐôÊ\u0006\u0010Àß8R4\n$c8fd9ca1-641d-44ee-a4b5-cb17ac79a7cc\u0012\f\b¥ÕôÊ\u0006\u0010·§\u0003R4\n$b1052bcb-960e-442f-bf2a-77e91ca04866\u0012\f\bâéôÊ\u0006\u0010þ¾\u0002R3\n$8c3e3c69-87d4-4117-a98d-bd0c2e81e26c\u0012\u000b\b¹ìôÊ\u0006\u0010ÀÔâLR4\n$753d5875-110a-4bfd-b2cb-fc24e0c4ba62\u0012\f\bÎõÊ\u0006\u0010¡Ã\u0003R4\n$43f47296-ec85-48be-8a8d-7e33d1c492d9\u0012\f\bæöÊ\u0006\u0010¼ùÅ\u0003R4\n$97b50250-8ad0-4e3c-930a-6504416978e2\u0012\f\bæöÊ\u0006\u0010¼ùÅ\u0003R4\n$3427ac89-3cc3-4045-b33e-a311b3b87c9c\u0012\f\b¿µöÊ\u0006\u0010ÀÎÂ\u0003R4\n$1ba4d21c-f79f-4c79-9ea2-06b069733b55\u0012\f\bßµöÊ\u0006\u0010Æ\u0003R3\n$79e1636b-f0bd-4733-952b-03e55bbd3bfe\u0012\u000b\bÏ÷Ê\u0006\u0010Àî¢\u0019R4\n$44e26028-d5e7-4a45-b693-126c6a756edb\u0012\f\b÷Ê\u0006\u0010À´©¨\u0001R3\n$c5a2d0fc-9a24-408c-805b-d45f2c70c7dc\u0012\u000b\bî÷Ê\u0006\u0010©`R4\n$08fa3596-c54e-47ab-b7a9-fc94210f4d6c\u0012\f\bÄ¯÷Ê\u0006\u0010Àìê\u0003R4\n$f06ea81f-5176-4f54-8959-a9ee135095bf\u0012\f\bì¸÷Ê\u0006\u0010éÉÖ\u0001R3\n$58ff1571-6919-4f19-955d-26c3621776d3\u0012\u000b\b¼÷Ê\u0006\u0010Àé×wR4\n$146b52f7-baef-4fd4-a089-fa8e52e80f84\u0012\f\b¾¡ùÊ\u0006\u0010Ûº\u0002R4\n$351398a0-b47f-443c-91fa-ea490f11c8af\u0012\f\b±©ùÊ\u0006\u0010¤\u0001R4\n$cabf7435-d647-448c-ad06-0bde52998f55\u0012\f\bç¬ùÊ\u0006\u0010Àá\u0001R4\n$9afe9c18-c02b-48ad-b4ff-57f20a99855e\u0012\f\bÒ¯ùÊ\u0006\u0010Ùº»\u0003R4\n$bf517cf1-cf72-4945-a43a-03263508726a\u0012\f\bÂ¹ùÊ\u0006\u0010¬ÆÂ\u0001R4\n$349603f9-c2ee-4335-9130-d83f77f51f07\u0012\f\bÓÈùÊ\u0006\u0010ÀÄÜ«\u0003R4\n$404d991a-6110-47e5-9c7a-52c8c3409baa\u0012\f\b¥éùÊ\u0006\u0010¥³\u0001R4\n$e655502f-584e-45c2-b3c4-d9bae80df30c\u0012\f\b±þùÊ\u0006\u0010ÎíÇ\u0003R4\n$a8a6bd79-c958-4e77-a176-f1afbf441307\u0012\f\bÿíùÊ\u0006\u0010Ûº\u0002R4\n$edd454b1-d2a4-465e-b66f-dbf8724cb3a5\u0012\f\b±þùÊ\u0006\u0010ÎíÇ\u0003R4\n$32a25010-07e3-4f06-b504-2d6875561a3b\u0012\f\b±þùÊ\u0006\u0010ÎíÇ\u0003R4\n$5ae5e43c-54c3-4ea2-92ed-3db2b40b5338\u0012\f\b¸ûÊ\u0006\u0010Ä¼\u0002R4\n$b143e8ab-265f-4108-b6f9-130eefbb2f89\u0012\f\bªÞüÊ\u0006\u0010ë®½\u0003R3\n$720dc826-661c-42b7-bb85-849858e724e1\u0012\u000b\bë²Ë\u0006\u0010À\u001cR4\n$fcc1fc63-db34-4c23-bcda-4ce0af9c8e57\u0012\f\bÛöË\u0006\u0010Ôæ\u0003R4\n$b437a092-ca8b-4782-b544-2dd0577f1a34\u0012\f\bá§Ë\u0006\u0010À°Ã\u0001R3\n$dabd5393-554a-4a14-9bc8-a62be7bea0d8\u0012\u000b\b¼ÛË\u0006\u0010À³TR4\n$cee26c5c-2064-47be-8aaa-9b8120d4b5b0\u0012\f\b©Ë\u0006\u0010µÒ·\u0003R3\n$2eeec02d-0e63-45f3-8254-c05d1bec112f\u0012\u000b\bË\u0006\u0010üÙ\u001aR4\n$55f6bade-2cfe-4dfb-8ede-fa4e106cb732\u0012\f\bùË\u0006\u0010«²\u0001R4\n$5f366a1f-8691-48b4-85a7-07f02520c187\u0012\f\b¢Ë\u0006\u0010À³²\u0003R4\n$eaab36b2-c69a-4725-9d22-65b1051862f5\u0012\f\bèþË\u0006\u0010áô\u0001R4\n$18827354-fe7d-4e22-b925-4a11c53c50c2\u0012\f\b¥Ë\u0006\u0010ÀÅøí\u0001R4\n$506efd44-a099-4a54-9d36-5d725f0741cb\u0012\f\bÈ¬Ë\u0006\u0010ÀÍÍ²\u0002R3\n$b157d191-bb67-4f60-abac-26598ce87667\u0012\u000b\b¸øË\u0006\u0010À¯Ì\u0012R4\n$8c8d7be8-59f1-4f63-90b3-21f0f3ee2435\u0012\f\bòªË\u0006\u0010µÉ½\u0002R3\n$f074d2f5-debc-48ca-ba1d-fc1931e87690\u0012\u000b\b³Ë\u0006\u0010ÀÜ®\u0017R4\n$f3adf6fc-cc74-4bf5-bfe3-50b817ac2cae\u0012\f\bÜË\u0006\u0010À´»\u0003R4\n$1f7bedb4-e19d-4b88-a7cf-eeb56ed72bd5\u0012\f\bË\u0006\u0010Àí\u0001R3\n$af1160f8-16fd-482e-a30f-dc88ef335c88\u0012\u000b\bÐ¢Ë\u0006\u0010Àæ`R3\n$4fb136ac-8d6c-4224-915d-8c3bf7359102\u0012\u000b\bÑ§Ë\u0006\u0010¯_Z\u0004\b\u0002\u0010\u0001z\u0002\u0010\u0001\u0001Ø\u0001\n_file:///c%3A/Users/Admin/.gemini/antigravity/brain/1b5759a0-6b3d-40e8-ab19-14b366f6d31a/task.md\u0012u\b\u0003\u0012bExpanded task list to include POS (Point of Sale), payment processing, and customer view features.\"\u000b\bøäëÊ\u0006\u0010¨õ\u0007(\u0001\u0001û\u0001\nnfile:///c%3A/Users/Admin/.gemini/antigravity/brain/1b5759a0-6b3d-40e8-ab19-14b366f6d31a/implementation_plan.md\u0012\u0001\b\u0001\u0012tUpdated implementation plan to include POS (Point of Sale), Payment Processing, and Customer Second Screen features.\"\f\båëÊ\u0006\u0010Ü¢\u0001(\u0001\u0001\u0002\nnfile:///c%3A/Users/Admin/.gemini/antigravity/brain/404d991a-6110-47e5-9c7a-52c8c3409baa/implementation_plan.md\u0012\u0001\b\u0001\u0012\u0001Proposal to switch gallery layout from CSS Grid to CSS Columns to achieve a masonry-style layout with fixed widths and variable heights.\"\f\bõáùÊ\u0006\u0010È¿õÁ\u0001\u0001c\n_file:///c%3A/Users/Admin/.gemini/antigravity/brain/1b5759a0-6b3d-40e8-ab19-14b366f6d31a/task.md\u0010\u0000\u0001r\nnfile:///c%3A/Users/Admin/.gemini/antigravity/brain/1b5759a0-6b3d-40e8-ab19-14b366f6d31a/implementation_plan.md\u0010\u0000\u0001r\nnfile:///c%3A/Users/Admin/.gemini/antigravity/brain/404d991a-6110-47e5-9c7a-52c8c3409baa/implementation_plan.md\u0010\u0000\u0001p\nlfile:///C:/Users/Admin/.gemini/antigravity/brain/1b5759a0-6b3d-40e8-ab19-14b366f6d31a/implementation_plan.md\u0010\u0001\u0001p\nlfile:///C:/Users/Admin/.gemini/antigravity/brain/404d991a-6110-47e5-9c7a-52c8c3409baa/implementation_plan.md\u0010\u0001\u0001\u0004\b\u0004\u0010\u0001\u0001\u0004\b\u000b\u0010\u0001\u0001\u0004\b\u0012\u0010\u0001\u0001Ú\u0018\u001a\u000eVagner Ribeiro:\u001avagnerribeiro.at@gmail.com\u0002\u0017\nË\u0005\n\u0013Gemini 3 Pro (High)\u0012\u0003\bð\u0007(\u0001X\u0001z\r\r\u0000\u0000?\u0012\u0006\bÑäÌ\u0006\u0001\u000e\n\nimage/jpeg\u0010\u0001\u0001\u000e\n\nvideo/webm\u0010\u0001\u0001\u000e\n\nimage/heic\u0010\u0001\u0001\u001c\n\u0018application/x-typescript\u0010\u0001\u0001\u0012\n\u000evideo/jpeg2000\u0010\u0001\u0001\u000e\n\nimage/webp\u0010\u0001\u0001\u0018\n\u0014video/text/timestamp\u0010\u0001\u0001\u000e\n\ntext/plain\u0010\u0001\u0001\f\n\btext/rtf\u0010\u0001\u0001\f\n\btext/css\u0010\u0001\u0001\u0013\n\u000fapplication/pdf\u0010\u0001\u0001\u000e\n\nimage/heif\u0010\u0001\u0001\r\n\ttext/html\u0010\u0001\u0001\u0013\n\u000ftext/javascript\u0010\u0001\u0001\u0018\n\u0014text/x-python-script\u0010\u0001\u0001\u0014\n\u0010application/json\u0010\u0001\u0001\u001c\n\u0018application/x-ipynb+json\u0010\u0001\u0001\u001d\n\u0019video/videoframe/jpeg2000\u0010\u0001\u0001\u001a\n\u0016audio/webm;codecs=opus\u0010\u0001\u0001\f\n\btext/xml\u0010\u0001\u0001\u001d\n\u0019application/x-python-code\u0010\u0001\u0001\u001c\n\u0018application/x-javascript\u0010\u0001\u0001\r\n\timage/png\u0010\u0001\u0001\u0013\n\u000fapplication/rtf\u0010\u0001\u0001\r\n\tvideo/mp4\u0010\u0001\u0001\u0011\n\rtext/x-python\u0010\u0001\u0001\u0015\n\u0011video/audio/s16le\u0010\u0001\u0001\u0015\n\u0011text/x-typescript\u0010\u0001\u0001\u0013\n\u000fvideo/audio/wav\u0010\u0001\u0001\f\n\btext/csv\u0010\u0001\u0001\u0011\n\rtext/markdown\u0010\u0001\nÊ\u0005\n\u0012Gemini 3 Pro (Low)\u0012\u0003\bï\u0007(\u0001X\u0001z\r\r\u0000\u0000?\u0012\u0006\bÑäÌ\u0006\u0001\u0013\n\u000fapplication/rtf\u0010\u0001\u0001\f\n\btext/rtf\u0010\u0001\u0001\f\n\btext/csv\u0010\u0001\u0001\u0013\n\u000fapplication/pdf\u0010\u0001\u0001\u0015\n\u0011video/audio/s16le\u0010\u0001\u0001\u0014\n\u0010application/json\u0010\u0001\u0001\u0011\n\rtext/markdown\u0010\u0001\u0001\u001c\n\u0018application/x-javascript\u0010\u0001\u0001\u001a\n\u0016audio/webm;codecs=opus\u0010\u0001\u0001\u001d\n\u0019application/x-python-code\u0010\u0001\u0001\u0018\n\u0014text/x-python-script\u0010\u0001\u0001\r\n\ttext/html\u0010\u0001\u0001\f\n\btext/css\u0010\u0001\u0001\u000e\n\nimage/jpeg\u0010\u0001\u0001\u001c\n\u0018application/x-typescript\u0010\u0001\u0001\u000e\n\nimage/heif\u0010\u0001\u0001\u0015\n\u0011text/x-typescript\u0010\u0001\u0001\f\n\btext/xml\u0010\u0001\u0001\u0012\n\u000evideo/jpeg2000\u0010\u0001\u0001\u000e\n\nimage/webp\u0010\u0001\u0001\u0013\n\u000ftext/javascript\u0010\u0001\u0001\u001d\n\u0019video/videoframe/jpeg2000\u0010\u0001\u0001\u0011\n\rtext/x-python\u0010\u0001\u0001\u000e\n\nimage/heic\u0010\u0001\u0001\r\n\tvideo/mp4\u0010\u0001\u0001\u0018\n\u0014video/text/timestamp\u0010\u0001\u0001\u001c\n\u0018application/x-ipynb+json\u0010\u0001\u0001\r\n\timage/png\u0010\u0001\u0001\u0013\n\u000fvideo/audio/wav\u0010\u0001\u0001\u000e\n\ntext/plain\u0010\u0001\u0001\u000e\n\nvideo/webm\u0010\u0001\nÆ\u0005\n\u000eGemini 3 Flash\u0012\u0003\bú\u0007(\u0001X\u0001z\r\r\u0000\u0000?\u0012\u0006\b«Ì\u0006\u0001\u0011\n\rtext/x-python\u0010\u0001\u0001\f\n\btext/css\u0010\u0001\u0001\r\n\timage/png\u0010\u0001\u0001\u0013\n\u000fapplication/rtf\u0010\u0001\u0001\r\n\ttext/html\u0010\u0001\u0001\u0011\n\rtext/markdown\u0010\u0001\u0001\u0013\n\u000fvideo/audio/wav\u0010\u0001\u0001\u000e\n\nimage/heic\u0010\u0001\u0001\u000e\n\nimage/heif\u0010\u0001\u0001\u0012\n\u000evideo/jpeg2000\u0010\u0001\u0001\u0015\n\u0011text/x-typescript\u0010\u0001\u0001\u0013\n\u000ftext/javascript\u0010\u0001\u0001\u0014\n\u0010application/json\u0010\u0001\u0001\u001d\n\u0019video/videoframe/jpeg2000\u0010\u0001\u0001\u0018\n\u0014text/x-python-script\u0010\u0001\u0001\u0018\n\u0014video/text/timestamp\u0010\u0001\u0001\f\n\btext/rtf\u0010\u0001\u0001\u001d\n\u0019application/x-python-code\u0010\u0001\u0001\f\n\btext/xml\u0010\u0001\u0001\u000e\n\ntext/plain\u0010\u0001\u0001\u0015\n\u0011video/audio/s16le\u0010\u0001\u0001\u001c\n\u0018application/x-ipynb+json\u0010\u0001\u0001\u001c\n\u0018application/x-typescript\u0010\u0001\u0001\u000e\n\nvideo/webm\u0010\u0001\u0001\u000e\n\nimage/webp\u0010\u0001\u0001\u0013\n\u000fapplication/pdf\u0010\u0001\u0001\f\n\btext/csv\u0010\u0001\u0001\u001c\n\u0018application/x-javascript\u0010\u0001\u0001\r\n\tvideo/mp4\u0010\u0001\u0001\u000e\n\nimage/jpeg\u0010\u0001\u0001\u001a\n\u0016audio/webm;codecs=opus\u0010\u0001\n´\u0001\n\u0011Claude Sonnet 4.5\u0012\u0003\bÍ\u0002(\u0001X\u0001z\r\r\u0000\u0000?\u0012\u0006\b«Ì\u0006\u0001\u000e\n\nimage/jpeg\u0010\u0001\u0001\r\n\timage/png\u0010\u0001\u0001\u000e\n\nimage/webp\u0010\u0001\u0001\u0012\n\u000evideo/jpeg2000\u0010\u0001\u0001\u001d\n\u0019video/videoframe/jpeg2000\u0010\u0001\u0001\u000e\n\nimage/heic\u0010\u0001\u0001\u000e\n\nimage/heif\u0010\u0001\n¿\u0001\n\u001cClaude Sonnet 4.5 (Thinking)\u0012\u0003\bÎ\u0002(\u0001X\u0001z\r\r\u0000\u0000?\u0012\u0006\b«Ì\u0006\u0001\u001d\n\u0019video/videoframe/jpeg2000\u0010\u0001\u0001\u000e\n\nimage/heic\u0010\u0001\u0001\u000e\n\nimage/heif\u0010\u0001\u0001\u000e\n\nimage/jpeg\u0010\u0001\u0001\r\n\timage/png\u0010\u0001\u0001\u000e\n\nimage/webp\u0010\u0001\u0001\u0012\n\u000evideo/jpeg2000\u0010\u0001\n½\u0001\n\u001aClaude Opus 4.5 (Thinking)\u0012\u0003\bô\u0007(\u0001X\u0001z\r\r\u0000\u0000?\u0012\u0006\b«Ì\u0006\u0001\u000e\n\nimage/heif\u0010\u0001\u0001\u000e\n\nimage/jpeg\u0010\u0001\u0001\r\n\timage/png\u0010\u0001\u0001\u000e\n\nimage/webp\u0010\u0001\u0001\u0012\n\u000evideo/jpeg2000\u0010\u0001\u0001\u001d\n\u0019video/videoframe/jpeg2000\u0010\u0001\u0001\u000e\n\nimage/heic\u0010\u0001\n-\n\u0015GPT-OSS 120B (Medium)\u0012\u0003\bÖ\u0002X\u0001z\r\r\u0000\u0000?\u0012\u0006\b«Ì\u0006\u0012­\u0001\n\u000bRecommended\u0012\u0001\u0012\u0013Gemini 3 Pro (High)\u0012\u0012Gemini 3 Pro (Low)\u0012\u000eGemini 3 Flash\u0012\u0011Claude Sonnet 4.5\u0012\u001cClaude Sonnet 4.5 (Thinking)\u0012\u001aClaude Opus 4.5 (Thinking)\u0012\u0015GPT-OSS 120B (Medium)\u001a\u0005\n\u0003\bð\u0007¢\u0002£\u0001\n\u000bg1-pro-tier\u0012\rGoogle AI Pro\u001a\rGoogle AI Pro:%https://antigravity.google/g1-upgradeBOYou can upgrade to the Google AI Ultra plan to receive the highest rate limits.",
+      "antigravity.agentViewContainerId.state.hidden": "Ö§¶(+jø­É¨\u001eÓÚéb°xuéßj[\u001eÖ§¶(+jø­É¨\u001eÔ¢uãÚéb°xuéßj[\u001e",
+      "antigravity_allowed_command_model_configs": "\n\u000eGemini 3 Flash\u0012\u0003\bú\u0007(\u0001X\u0001b\u0006\u0002\u0001\u0005\u0003\u0004\bz\r\r\u0000\u0000?\u0012\u0006\bïÂÍ\u0006\u0001\u0014\n\u0010application/json\u0010\u0001\u0001\u0013\n\u000fapplication/pdf\u0010\u0001\u0001\u0013\n\u000fapplication/rtf\u0010\u0001\u0001\u001c\n\u0018application/x-ipynb+json\u0010\u0001\u0001\u001c\n\u0018application/x-javascript\u0010\u0001\u0001\u001d\n\u0019application/x-python-code\u0010\u0001\u0001\u001c\n\u0018application/x-typescript\u0010\u0001\u0001\u001a\n\u0016audio/webm;codecs=opus\u0010\u0001\u0001\u000e\n\nimage/heic\u0010\u0001\u0001\u000e\n\nimage/heif\u0010\u0001\u0001\u000e\n\nimage/jpeg\u0010\u0001\u0001\r\n\timage/png\u0010\u0001\u0001\u000e\n\nimage/webp\u0010\u0001\u0001\f\n\btext/css\u0010\u0001\u0001\f\n\btext/csv\u0010\u0001\u0001\r\n\ttext/html\u0010\u0001\u0001\u0013\n\u000ftext/javascript\u0010\u0001\u0001\u0011\n\rtext/markdown\u0010\u0001\u0001\u000e\n\ntext/plain\u0010\u0001\u0001\f\n\btext/rtf\u0010\u0001\u0001\u0011\n\rtext/x-python\u0010\u0001\u0001\u0018\n\u0014text/x-python-script\u0010\u0001\u0001\u0015\n\u0011text/x-typescript\u0010\u0001\u0001\f\n\btext/xml\u0010\u0001\u0001\u0015\n\u0011video/audio/s16le\u0010\u0001\u0001\u0013\n\u000fvideo/audio/wav\u0010\u0001\u0001\u0012\n\u000evideo/jpeg2000\u0010\u0001\u0001\r\n\tvideo/mp4\u0010\u0001\u0001\u0018\n\u0014video/text/timestamp\u0010\u0001\u0001\u001d\n\u0019video/videoframe/jpeg2000\u0010\u0001\u0001\u000e\n\nvideo/webm\u0010\u0001",
+      "content.trust.model.key": "º¸®ë-\"wèº¸¦Ý_°ö­Õ,z»\u0000vh§?'!j¹®ÞrÛ)ÊØhúèç-±êu{\u001b^®v¥~)^ÿÿÝÜ\u000fÔ±êìü\u0007fÏÉÈZ®cë¢7¶ÏéÊØhúèç-¥«aýßÔ±êìü\u0007fÏÉÈZ®cë¢7¶ÏéÊØhúèç-±È^çâëkºË^vÚîzêâ'u¥«aü?ìr\u0017¦yø¥zÚî²×¶»",
+      "antigravityUnifiedStateSync.agentPreferences": "\n!\n\u0017planningModeSentinelKey\u0012\u0006\n\u0004CAE=\n)\n\u001fartifactReviewPolicySentinelKey\u0012\u0006\n\u0004EAE=\n0\n&terminalAutoExecutionPolicySentinelKey\u0012\u0006\n\u0004EAE=\n,\n\"terminalAllowedCommandsSentinelKey\u0012\u0006\n\u0004IgA=\n+\n!terminalDeniedCommandsSentinelKey\u0012\u0006\n\u0004IgA=\n6\n,allowAgentAccessNonWorkspaceFilesSentinelKey\u0012\u0006\n\u0004CAA=\n5\n+allowCascadeAccessGitignoreFilesSentinelKey\u0012\u0006\n\u0004CAA=\n$\n\u0015secureModeSentinelKey\u0012\u000b\n\u0004CAA=\u0010Æ¥\u0001\n7\n-explainAndFixInCurrentConversationSentinelKey\u0012\u0006\n\u0004CAA=",
+      "antigravityUnifiedStateSync.modelPreferences": "\n0\n&last_selected_agent_model_sentinel_key\u0012\u0006\n\u0004EJcI",
+      "antigravityUnifiedStateSync.modelCredits": "\n(\n\u001eminimumCreditAmountForUsageKey\u0012\u0006\n\u0004EDI=",
+      "antigravityUnifiedStateSync.agentManagerWindow": "\n\u001b\n\u0011managerWindowMode\u0012\u0006\n\u0004EAE=\n\u0016\n\fmanagerWidth\u0012\u0006\n\u0004ELAJ\n\u0017\n\rmanagerHeight\u0012\u0006\n\u0004EKAG\n\u0012\n\bmanagerX\u0012\u0006\n\u0004EOgC\n\u0012\n\bmanagerY\u0012\u0006\n\u0004EHo="
+    }
+  },
+  "logs": {
+    "timestamp": "2026-04-03T15:44:36.955173",
+    "source": "cloudcode_logs",
+    "model_fetches": [
+      {
+        "timestamp": "2026-04-03 09:35:40",
+        "traceId": "9d0d9c0c2d90289"
+      },
+      {
+        "timestamp": "2026-04-03 09:40:40",
+        "traceId": "95f0f46e0482f54b"
+      },
+      {
+        "timestamp": "2026-04-03 09:45:40",
+        "traceId": "cb2edb949cb09e34"
+      },
+      {
+        "timestamp": "2026-04-03 09:50:40",
+        "traceId": "c39a6a3549b4d495"
+      },
+      {
+        "timestamp": "2026-04-03 09:55:40",
+        "traceId": "680cceb160980587"
+      },
+      {
+        "timestamp": "2026-04-03 10:00:40",
+        "traceId": "59c9881234eb1574"
+      },
+      {
+        "timestamp": "2026-04-03 10:05:41",
+        "traceId": "9cb2f9647ac085e4"
+      },
+      {
+        "timestamp": "2026-04-03 10:10:40",
+        "traceId": "2fec77cae342f3e7"
+      },
+      {
+        "timestamp": "2026-04-03 10:15:40",
+        "traceId": "e2d10961ebc39942"
+      },
+      {
+        "timestamp": "2026-04-03 10:20:40",
+        "traceId": "11c673e5a1c8191f"
+      },
+      {
+        "timestamp": "2026-04-03 10:25:40",
+        "traceId": "aad1b0d1d2299c59"
+      },
+      {
+        "timestamp": "2026-04-03 10:30:40",
+        "traceId": "ccbcafa0c2ed214a"
+      },
+      {
+        "timestamp": "2026-04-03 10:35:40",
+        "traceId": "9fc521225decde2a"
+      },
+      {
+        "timestamp": "2026-04-03 10:40:40",
+        "traceId": "9042943c44fa11e5"
+      },
+      {
+        "timestamp": "2026-04-03 10:56:14",
+        "traceId": "20ffec7b6d5d20ae"
+      },
+      {
+        "timestamp": "2026-04-03 11:01:14",
+        "traceId": "1e130a001f5e925a"
+      }
+    ],
+    "errors": [
+      "2026-04-03 10:51:12.718 [error] Failed to make POST request: request to https://daily-cloudcode-pa.googleapis.com/v1internal:loadCodeAssist failed, reason: getaddrinfo ENOTFOUND daily-cloudcode-pa.googleapis.com",
+      "2026-04-03 10:51:12.721 [error] Failed to fetch NUXes: request to https://daily-cloudcode-pa.googleapis.com/v1internal/cascadeNuxes failed, reason: getaddrinfo ENOTFOUND daily-cloudcode-pa.googleapis.com"
+    ]
+  },
+  "summary": {
+    "model_preferences_found": false,
+    "model_credits_found": false,
+    "total_log_fetches": 16,
+    "errors_count": 2
+  }
+}

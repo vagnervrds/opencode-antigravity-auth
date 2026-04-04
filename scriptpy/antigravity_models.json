@@ -1,0 +1,1611 @@
+﻿{
+    "modelCredits":  "\n(\n\u001eminimumCreditAmountForUsageKey\u0012\u0006\n\u0004EDI=",
+    "modelPreferences":  "\n0\n\u0026last_selected_agent_model_sentinel_key\u0012\u0006\n\u0004EJcI",
+    "timestamp":  "2026-04-03T15:38:24.8360791-04:00",
+    "models":  [
+
+               ],
+    "recentLogs":  [
+                       {
+                           "IgnoreCase":  true,
+                           "LineNumber":  5,
+                           "Line":  "2026-04-03 09:05:48.458 [info] [CloudCode] POST v1internal:fetchAvailableModels traceId: 6bbc8cf19eab459f",
+                           "Filename":  "InputStream",
+                           "Path":  "InputStream",
+                           "Pattern":  "fetchAvailableModels|model",
+                           "Context":  null,
+                           "Matches":  [
+                                           {
+                                               "Groups":  [
+                                                              {
+                                                                  "Groups":  [
+                                                                                 {
+                                                                                     "Groups":  [
+                                                                                                    {
+                                                                                                        "Groups":  "fetchAvailableModels",
+                                                                                                        "Success":  true,
+                                                                                                        "Name":  "0",
+                                                                                                        "Captures":  "fetchAvailableModels",
+                                                                                                        "Index":  59,
+                                                                                                        "Length":  20,
+                                                                                                        "Value":  "fetchAvailableModels"
+                                                                                                    }
+                                                                                                ],
+                                                                                     "Success":  true,
+                                                                                     "Name":  "0",
+                                                                                     "Captures":  [
+                                                                                                      {
+                                                                                                          "Groups":  "fetchAvailableModels",
+                                                                                                          "Success":  true,
+                                                                                                          "Name":  "0",
+                                                                                                          "Captures":  "fetchAvailableModels",
+                                                                                                          "Index":  59,
+                                                                                                          "Length":  20,
+                                                                                                          "Value":  "fetchAvailableModels"
+                                                                                                      }
+                                                                                                  ],
+                                                                                     "Index":  59,
+                                                                                     "Length":  20,
+                                                                                     "Value":  "fetchAvailableModels"
+                                                                                 }
+                                                                             ],
+                                                                  "Success":  true,
+                                                                  "Name":  "0",
+                                                                  "Captures":  [
+                                                                                   {
+                                                                                       "Groups":  [
+                                                                                                      {
+                                                                                                          "Groups":  "fetchAvailableModels",
+                                                                                                          "Success":  true,
+                                                                                                          "Name":  "0",
+                                                                                                          "Captures":  "fetchAvailableModels",
+                                                                                                          "Index":  59,
+                                                                                                          "Length":  20,
+                                                                                                          "Value":  "fetchAvailableModels"
+                                                                                                      }
+                                                                                                  ],
+                                                                                       "Success":  true,
+                                                                                       "Name":  "0",
+                                                                                       "Captures":  [
+                                                                                                        {
+                                                                                                            "Groups":  "fetchAvailableModels",
+                                                                                                            "Success":  true,
+                                                                                                            "Name":  "0",
+                                                                                                            "Captures":  "fetchAvailableModels",
+                                                                                                            "Index":  59,
+                                                                                                            "Length":  20,
+                                                                                                            "Value":  "fetchAvailableModels"
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "Index":  59,
+                                                                                       "Length":  20,
+                                                                                       "Value":  "fetchAvailableModels"
+                                                                                   }
+                                                                               ],
+                                                                  "Index":  59,
+                                                                  "Length":  20,
+                                                                  "Value":  "fetchAvailableModels"
+                                                              }
+                                                          ],
+                                               "Success":  true,
+                                               "Name":  "0",
+                                               "Captures":  [
+                                                                {
+                                                                    "Groups":  [
+                                                                                   {
+                                                                                       "Groups":  [
+                                                                                                      {
+                                                                                                          "Groups":  "fetchAvailableModels",
+                                                                                                          "Success":  true,
+                                                                                                          "Name":  "0",
+                                                                                                          "Captures":  "fetchAvailableModels",
+                                                                                                          "Index":  59,
+                                                                                                          "Length":  20,
+                                                                                                          "Value":  "fetchAvailableModels"
+                                                                                                      }
+                                                                                                  ],
+                                                                                       "Success":  true,
+                                                                                       "Name":  "0",
+                                                                                       "Captures":  [
+                                                                                                        {
+                                                                                                            "Groups":  "fetchAvailableModels",
+                                                                                                            "Success":  true,
+                                                                                                            "Name":  "0",
+                                                                                                            "Captures":  "fetchAvailableModels",
+                                                                                                            "Index":  59,
+                                                                                                            "Length":  20,
+                                                                                                            "Value":  "fetchAvailableModels"
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "Index":  59,
+                                                                                       "Length":  20,
+                                                                                       "Value":  "fetchAvailableModels"
+                                                                                   }
+                                                                               ],
+                                                                    "Success":  true,
+                                                                    "Name":  "0",
+                                                                    "Captures":  [
+                                                                                     {
+                                                                                         "Groups":  [
+                                                                                                        {
+                                                                                                            "Groups":  "fetchAvailableModels",
+                                                                                                            "Success":  true,
+                                                                                                            "Name":  "0",
+                                                                                                            "Captures":  "fetchAvailableModels",
+                                                                                                            "Index":  59,
+                                                                                                            "Length":  20,
+                                                                                                            "Value":  "fetchAvailableModels"
+                                                                                                        }
+                                                                                                    ],
+                                                                                         "Success":  true,
+                                                                                         "Name":  "0",
+                                                                                         "Captures":  [
+                                                                                                          {
+                                                                                                              "Groups":  "fetchAvailableModels",
+                                                                                                              "Success":  true,
+                                                                                                              "Name":  "0",
+                                                                                                              "Captures":  "fetchAvailableModels",
+                                                                                                              "Index":  59,
+                                                                                                              "Length":  20,
+                                                                                                              "Value":  "fetchAvailableModels"
+                                                                                                          }
+                                                                                                      ],
+                                                                                         "Index":  59,
+                                                                                         "Length":  20,
+                                                                                         "Value":  "fetchAvailableModels"
+                                                                                     }
+                                                                                 ],
+                                                                    "Index":  59,
+                                                                    "Length":  20,
+                                                                    "Value":  "fetchAvailableModels"
+                                                                }
+                                                            ],
+                                               "Index":  59,
+                                               "Length":  20,
+                                               "Value":  "fetchAvailableModels"
+                                           }
+                                       ]
+                       },
+                       {
+                           "IgnoreCase":  true,
+                           "LineNumber":  6,
+                           "Line":  "2026-04-03 09:05:48.902 [info] [CloudCode] POST v1internal:fetchAvailableModels traceId: 8ed3d344397ad700",
+                           "Filename":  "InputStream",
+                           "Path":  "InputStream",
+                           "Pattern":  "fetchAvailableModels|model",
+                           "Context":  null,
+                           "Matches":  [
+                                           {
+                                               "Groups":  [
+                                                              {
+                                                                  "Groups":  [
+                                                                                 {
+                                                                                     "Groups":  [
+                                                                                                    {
+                                                                                                        "Groups":  "fetchAvailableModels",
+                                                                                                        "Success":  true,
+                                                                                                        "Name":  "0",
+                                                                                                        "Captures":  "fetchAvailableModels",
+                                                                                                        "Index":  59,
+                                                                                                        "Length":  20,
+                                                                                                        "Value":  "fetchAvailableModels"
+                                                                                                    }
+                                                                                                ],
+                                                                                     "Success":  true,
+                                                                                     "Name":  "0",
+                                                                                     "Captures":  [
+                                                                                                      {
+                                                                                                          "Groups":  "fetchAvailableModels",
+                                                                                                          "Success":  true,
+                                                                                                          "Name":  "0",
+                                                                                                          "Captures":  "fetchAvailableModels",
+                                                                                                          "Index":  59,
+                                                                                                          "Length":  20,
+                                                                                                          "Value":  "fetchAvailableModels"
+                                                                                                      }
+                                                                                                  ],
+                                                                                     "Index":  59,
+                                                                                     "Length":  20,
+                                                                                     "Value":  "fetchAvailableModels"
+                                                                                 }
+                                                                             ],
+                                                                  "Success":  true,
+                                                                  "Name":  "0",
+                                                                  "Captures":  [
+                                                                                   {
+                                                                                       "Groups":  [
+                                                                                                      {
+                                                                                                          "Groups":  "fetchAvailableModels",
+                                                                                                          "Success":  true,
+                                                                                                          "Name":  "0",
+                                                                                                          "Captures":  "fetchAvailableModels",
+                                                                                                          "Index":  59,
+                                                                                                          "Length":  20,
+                                                                                                          "Value":  "fetchAvailableModels"
+                                                                                                      }
+                                                                                                  ],
+                                                                                       "Success":  true,
+                                                                                       "Name":  "0",
+                                                                                       "Captures":  [
+                                                                                                        {
+                                                                                                            "Groups":  "fetchAvailableModels",
+                                                                                                            "Success":  true,
+                                                                                                            "Name":  "0",
+                                                                                                            "Captures":  "fetchAvailableModels",
+                                                                                                            "Index":  59,
+                                                                                                            "Length":  20,
+                                                                                                            "Value":  "fetchAvailableModels"
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "Index":  59,
+                                                                                       "Length":  20,
+                                                                                       "Value":  "fetchAvailableModels"
+                                                                                   }
+                                                                               ],
+                                                                  "Index":  59,
+                                                                  "Length":  20,
+                                                                  "Value":  "fetchAvailableModels"
+                                                              }
+                                                          ],
+                                               "Success":  true,
+                                               "Name":  "0",
+                                               "Captures":  [
+                                                                {
+                                                                    "Groups":  [
+                                                                                   {
+                                                                                       "Groups":  [
+                                                                                                      {
+                                                                                                          "Groups":  "fetchAvailableModels",
+                                                                                                          "Success":  true,
+                                                                                                          "Name":  "0",
+                                                                                                          "Captures":  "fetchAvailableModels",
+                                                                                                          "Index":  59,
+                                                                                                          "Length":  20,
+                                                                                                          "Value":  "fetchAvailableModels"
+                                                                                                      }
+                                                                                                  ],
+                                                                                       "Success":  true,
+                                                                                       "Name":  "0",
+                                                                                       "Captures":  [
+                                                                                                        {
+                                                                                                            "Groups":  "fetchAvailableModels",
+                                                                                                            "Success":  true,
+                                                                                                            "Name":  "0",
+                                                                                                            "Captures":  "fetchAvailableModels",
+                                                                                                            "Index":  59,
+                                                                                                            "Length":  20,
+                                                                                                            "Value":  "fetchAvailableModels"
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "Index":  59,
+                                                                                       "Length":  20,
+                                                                                       "Value":  "fetchAvailableModels"
+                                                                                   }
+                                                                               ],
+                                                                    "Success":  true,
+                                                                    "Name":  "0",
+                                                                    "Captures":  [
+                                                                                     {
+                                                                                         "Groups":  [
+                                                                                                        {
+                                                                                                            "Groups":  "fetchAvailableModels",
+                                                                                                            "Success":  true,
+                                                                                                            "Name":  "0",
+                                                                                                            "Captures":  "fetchAvailableModels",
+                                                                                                            "Index":  59,
+                                                                                                            "Length":  20,
+                                                                                                            "Value":  "fetchAvailableModels"
+                                                                                                        }
+                                                                                                    ],
+                                                                                         "Success":  true,
+                                                                                         "Name":  "0",
+                                                                                         "Captures":  [
+                                                                                                          {
+                                                                                                              "Groups":  "fetchAvailableModels",
+                                                                                                              "Success":  true,
+                                                                                                              "Name":  "0",
+                                                                                                              "Captures":  "fetchAvailableModels",
+                                                                                                              "Index":  59,
+                                                                                                              "Length":  20,
+                                                                                                              "Value":  "fetchAvailableModels"
+                                                                                                          }
+                                                                                                      ],
+                                                                                         "Index":  59,
+                                                                                         "Length":  20,
+                                                                                         "Value":  "fetchAvailableModels"
+                                                                                     }
+                                                                                 ],
+                                                                    "Index":  59,
+                                                                    "Length":  20,
+                                                                    "Value":  "fetchAvailableModels"
+                                                                }
+                                                            ],
+                                               "Index":  59,
+                                               "Length":  20,
+                                               "Value":  "fetchAvailableModels"
+                                           }
+                                       ]
+                       },
+                       {
+                           "IgnoreCase":  true,
+                           "LineNumber":  9,
+                           "Line":  "2026-04-03 09:10:40.598 [info] [CloudCode] POST v1internal:fetchAvailableModels traceId: 6f02b20613d87460",
+                           "Filename":  "InputStream",
+                           "Path":  "InputStream",
+                           "Pattern":  "fetchAvailableModels|model",
+                           "Context":  null,
+                           "Matches":  [
+                                           {
+                                               "Groups":  [
+                                                              {
+                                                                  "Groups":  [
+                                                                                 {
+                                                                                     "Groups":  [
+                                                                                                    {
+                                                                                                        "Groups":  "fetchAvailableModels",
+                                                                                                        "Success":  true,
+                                                                                                        "Name":  "0",
+                                                                                                        "Captures":  "fetchAvailableModels",
+                                                                                                        "Index":  59,
+                                                                                                        "Length":  20,
+                                                                                                        "Value":  "fetchAvailableModels"
+                                                                                                    }
+                                                                                                ],
+                                                                                     "Success":  true,
+                                                                                     "Name":  "0",
+                                                                                     "Captures":  [
+                                                                                                      {
+                                                                                                          "Groups":  "fetchAvailableModels",
+                                                                                                          "Success":  true,
+                                                                                                          "Name":  "0",
+                                                                                                          "Captures":  "fetchAvailableModels",
+                                                                                                          "Index":  59,
+                                                                                                          "Length":  20,
+                                                                                                          "Value":  "fetchAvailableModels"
+                                                                                                      }
+                                                                                                  ],
+                                                                                     "Index":  59,
+                                                                                     "Length":  20,
+                                                                                     "Value":  "fetchAvailableModels"
+                                                                                 }
+                                                                             ],
+                                                                  "Success":  true,
+                                                                  "Name":  "0",
+                                                                  "Captures":  [
+                                                                                   {
+                                                                                       "Groups":  [
+                                                                                                      {
+                                                                                                          "Groups":  "fetchAvailableModels",
+                                                                                                          "Success":  true,
+                                                                                                          "Name":  "0",
+                                                                                                          "Captures":  "fetchAvailableModels",
+                                                                                                          "Index":  59,
+                                                                                                          "Length":  20,
+                                                                                                          "Value":  "fetchAvailableModels"
+                                                                                                      }
+                                                                                                  ],
+                                                                                       "Success":  true,
+                                                                                       "Name":  "0",
+                                                                                       "Captures":  [
+                                                                                                        {
+                                                                                                            "Groups":  "fetchAvailableModels",
+                                                                                                            "Success":  true,
+                                                                                                            "Name":  "0",
+                                                                                                            "Captures":  "fetchAvailableModels",
+                                                                                                            "Index":  59,
+                                                                                                            "Length":  20,
+                                                                                                            "Value":  "fetchAvailableModels"
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "Index":  59,
+                                                                                       "Length":  20,
+                                                                                       "Value":  "fetchAvailableModels"
+                                                                                   }
+                                                                               ],
+                                                                  "Index":  59,
+                                                                  "Length":  20,
+                                                                  "Value":  "fetchAvailableModels"
+                                                              }
+                                                          ],
+                                               "Success":  true,
+                                               "Name":  "0",
+                                               "Captures":  [
+                                                                {
+                                                                    "Groups":  [
+                                                                                   {
+                                                                                       "Groups":  [
+                                                                                                      {
+                                                                                                          "Groups":  "fetchAvailableModels",
+                                                                                                          "Success":  true,
+                                                                                                          "Name":  "0",
+                                                                                                          "Captures":  "fetchAvailableModels",
+                                                                                                          "Index":  59,
+                                                                                                          "Length":  20,
+                                                                                                          "Value":  "fetchAvailableModels"
+                                                                                                      }
+                                                                                                  ],
+                                                                                       "Success":  true,
+                                                                                       "Name":  "0",
+                                                                                       "Captures":  [
+                                                                                                        {
+                                                                                                            "Groups":  "fetchAvailableModels",
+                                                                                                            "Success":  true,
+                                                                                                            "Name":  "0",
+                                                                                                            "Captures":  "fetchAvailableModels",
+                                                                                                            "Index":  59,
+                                                                                                            "Length":  20,
+                                                                                                            "Value":  "fetchAvailableModels"
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "Index":  59,
+                                                                                       "Length":  20,
+                                                                                       "Value":  "fetchAvailableModels"
+                                                                                   }
+                                                                               ],
+                                                                    "Success":  true,
+                                                                    "Name":  "0",
+                                                                    "Captures":  [
+                                                                                     {
+                                                                                         "Groups":  [
+                                                                                                        {
+                                                                                                            "Groups":  "fetchAvailableModels",
+                                                                                                            "Success":  true,
+                                                                                                            "Name":  "0",
+                                                                                                            "Captures":  "fetchAvailableModels",
+                                                                                                            "Index":  59,
+                                                                                                            "Length":  20,
+                                                                                                            "Value":  "fetchAvailableModels"
+                                                                                                        }
+                                                                                                    ],
+                                                                                         "Success":  true,
+                                                                                         "Name":  "0",
+                                                                                         "Captures":  [
+                                                                                                          {
+                                                                                                              "Groups":  "fetchAvailableModels",
+                                                                                                              "Success":  true,
+                                                                                                              "Name":  "0",
+                                                                                                              "Captures":  "fetchAvailableModels",
+                                                                                                              "Index":  59,
+                                                                                                              "Length":  20,
+                                                                                                              "Value":  "fetchAvailableModels"
+                                                                                                          }
+                                                                                                      ],
+                                                                                         "Index":  59,
+                                                                                         "Length":  20,
+                                                                                         "Value":  "fetchAvailableModels"
+                                                                                     }
+                                                                                 ],
+                                                                    "Index":  59,
+                                                                    "Length":  20,
+                                                                    "Value":  "fetchAvailableModels"
+                                                                }
+                                                            ],
+                                               "Index":  59,
+                                               "Length":  20,
+                                               "Value":  "fetchAvailableModels"
+                                           }
+                                       ]
+                       },
+                       {
+                           "IgnoreCase":  true,
+                           "LineNumber":  12,
+                           "Line":  "2026-04-03 09:15:40.317 [info] [CloudCode] POST v1internal:fetchAvailableModels traceId: 6102e3a8831f2162",
+                           "Filename":  "InputStream",
+                           "Path":  "InputStream",
+                           "Pattern":  "fetchAvailableModels|model",
+                           "Context":  null,
+                           "Matches":  [
+                                           {
+                                               "Groups":  [
+                                                              {
+                                                                  "Groups":  [
+                                                                                 {
+                                                                                     "Groups":  [
+                                                                                                    {
+                                                                                                        "Groups":  "fetchAvailableModels",
+                                                                                                        "Success":  true,
+                                                                                                        "Name":  "0",
+                                                                                                        "Captures":  "fetchAvailableModels",
+                                                                                                        "Index":  59,
+                                                                                                        "Length":  20,
+                                                                                                        "Value":  "fetchAvailableModels"
+                                                                                                    }
+                                                                                                ],
+                                                                                     "Success":  true,
+                                                                                     "Name":  "0",
+                                                                                     "Captures":  [
+                                                                                                      {
+                                                                                                          "Groups":  "fetchAvailableModels",
+                                                                                                          "Success":  true,
+                                                                                                          "Name":  "0",
+                                                                                                          "Captures":  "fetchAvailableModels",
+                                                                                                          "Index":  59,
+                                                                                                          "Length":  20,
+                                                                                                          "Value":  "fetchAvailableModels"
+                                                                                                      }
+                                                                                                  ],
+                                                                                     "Index":  59,
+                                                                                     "Length":  20,
+                                                                                     "Value":  "fetchAvailableModels"
+                                                                                 }
+                                                                             ],
+                                                                  "Success":  true,
+                                                                  "Name":  "0",
+                                                                  "Captures":  [
+                                                                                   {
+                                                                                       "Groups":  [
+                                                                                                      {
+                                                                                                          "Groups":  "fetchAvailableModels",
+                                                                                                          "Success":  true,
+                                                                                                          "Name":  "0",
+                                                                                                          "Captures":  "fetchAvailableModels",
+                                                                                                          "Index":  59,
+                                                                                                          "Length":  20,
+                                                                                                          "Value":  "fetchAvailableModels"
+                                                                                                      }
+                                                                                                  ],
+                                                                                       "Success":  true,
+                                                                                       "Name":  "0",
+                                                                                       "Captures":  [
+                                                                                                        {
+                                                                                                            "Groups":  "fetchAvailableModels",
+                                                                                                            "Success":  true,
+                                                                                                            "Name":  "0",
+                                                                                                            "Captures":  "fetchAvailableModels",
+                                                                                                            "Index":  59,
+                                                                                                            "Length":  20,
+                                                                                                            "Value":  "fetchAvailableModels"
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "Index":  59,
+                                                                                       "Length":  20,
+                                                                                       "Value":  "fetchAvailableModels"
+                                                                                   }
+                                                                               ],
+                                                                  "Index":  59,
+                                                                  "Length":  20,
+                                                                  "Value":  "fetchAvailableModels"
+                                                              }
+                                                          ],
+                                               "Success":  true,
+                                               "Name":  "0",
+                                               "Captures":  [
+                                                                {
+                                                                    "Groups":  [
+                                                                                   {
+                                                                                       "Groups":  [
+                                                                                                      {
+                                                                                                          "Groups":  "fetchAvailableModels",
+                                                                                                          "Success":  true,
+                                                                                                          "Name":  "0",
+                                                                                                          "Captures":  "fetchAvailableModels",
+                                                                                                          "Index":  59,
+                                                                                                          "Length":  20,
+                                                                                                          "Value":  "fetchAvailableModels"
+                                                                                                      }
+                                                                                                  ],
+                                                                                       "Success":  true,
+                                                                                       "Name":  "0",
+                                                                                       "Captures":  [
+                                                                                                        {
+                                                                                                            "Groups":  "fetchAvailableModels",
+                                                                                                            "Success":  true,
+                                                                                                            "Name":  "0",
+                                                                                                            "Captures":  "fetchAvailableModels",
+                                                                                                            "Index":  59,
+                                                                                                            "Length":  20,
+                                                                                                            "Value":  "fetchAvailableModels"
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "Index":  59,
+                                                                                       "Length":  20,
+                                                                                       "Value":  "fetchAvailableModels"
+                                                                                   }
+                                                                               ],
+                                                                    "Success":  true,
+                                                                    "Name":  "0",
+                                                                    "Captures":  [
+                                                                                     {
+                                                                                         "Groups":  [
+                                                                                                        {
+                                                                                                            "Groups":  "fetchAvailableModels",
+                                                                                                            "Success":  true,
+                                                                                                            "Name":  "0",
+                                                                                                            "Captures":  "fetchAvailableModels",
+                                                                                                            "Index":  59,
+                                                                                                            "Length":  20,
+                                                                                                            "Value":  "fetchAvailableModels"
+                                                                                                        }
+                                                                                                    ],
+                                                                                         "Success":  true,
+                                                                                         "Name":  "0",
+                                                                                         "Captures":  [
+                                                                                                          {
+                                                                                                              "Groups":  "fetchAvailableModels",
+                                                                                                              "Success":  true,
+                                                                                                              "Name":  "0",
+                                                                                                              "Captures":  "fetchAvailableModels",
+                                                                                                              "Index":  59,
+                                                                                                              "Length":  20,
+                                                                                                              "Value":  "fetchAvailableModels"
+                                                                                                          }
+                                                                                                      ],
+                                                                                         "Index":  59,
+                                                                                         "Length":  20,
+                                                                                         "Value":  "fetchAvailableModels"
+                                                                                     }
+                                                                                 ],
+                                                                    "Index":  59,
+                                                                    "Length":  20,
+                                                                    "Value":  "fetchAvailableModels"
+                                                                }
+                                                            ],
+                                               "Index":  59,
+                                               "Length":  20,
+                                               "Value":  "fetchAvailableModels"
+                                           }
+                                       ]
+                       },
+                       {
+                           "IgnoreCase":  true,
+                           "LineNumber":  15,
+                           "Line":  "2026-04-03 09:20:40.409 [info] [CloudCode] POST v1internal:fetchAvailableModels traceId: 23f50535aaddab3e",
+                           "Filename":  "InputStream",
+                           "Path":  "InputStream",
+                           "Pattern":  "fetchAvailableModels|model",
+                           "Context":  null,
+                           "Matches":  [
+                                           {
+                                               "Groups":  [
+                                                              {
+                                                                  "Groups":  [
+                                                                                 {
+                                                                                     "Groups":  [
+                                                                                                    {
+                                                                                                        "Groups":  "fetchAvailableModels",
+                                                                                                        "Success":  true,
+                                                                                                        "Name":  "0",
+                                                                                                        "Captures":  "fetchAvailableModels",
+                                                                                                        "Index":  59,
+                                                                                                        "Length":  20,
+                                                                                                        "Value":  "fetchAvailableModels"
+                                                                                                    }
+                                                                                                ],
+                                                                                     "Success":  true,
+                                                                                     "Name":  "0",
+                                                                                     "Captures":  [
+                                                                                                      {
+                                                                                                          "Groups":  "fetchAvailableModels",
+                                                                                                          "Success":  true,
+                                                                                                          "Name":  "0",
+                                                                                                          "Captures":  "fetchAvailableModels",
+                                                                                                          "Index":  59,
+                                                                                                          "Length":  20,
+                                                                                                          "Value":  "fetchAvailableModels"
+                                                                                                      }
+                                                                                                  ],
+                                                                                     "Index":  59,
+                                                                                     "Length":  20,
+                                                                                     "Value":  "fetchAvailableModels"
+                                                                                 }
+                                                                             ],
+                                                                  "Success":  true,
+                                                                  "Name":  "0",
+                                                                  "Captures":  [
+                                                                                   {
+                                                                                       "Groups":  [
+                                                                                                      {
+                                                                                                          "Groups":  "fetchAvailableModels",
+                                                                                                          "Success":  true,
+                                                                                                          "Name":  "0",
+                                                                                                          "Captures":  "fetchAvailableModels",
+                                                                                                          "Index":  59,
+                                                                                                          "Length":  20,
+                                                                                                          "Value":  "fetchAvailableModels"
+                                                                                                      }
+                                                                                                  ],
+                                                                                       "Success":  true,
+                                                                                       "Name":  "0",
+                                                                                       "Captures":  [
+                                                                                                        {
+                                                                                                            "Groups":  "fetchAvailableModels",
+                                                                                                            "Success":  true,
+                                                                                                            "Name":  "0",
+                                                                                                            "Captures":  "fetchAvailableModels",
+                                                                                                            "Index":  59,
+                                                                                                            "Length":  20,
+                                                                                                            "Value":  "fetchAvailableModels"
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "Index":  59,
+                                                                                       "Length":  20,
+                                                                                       "Value":  "fetchAvailableModels"
+                                                                                   }
+                                                                               ],
+                                                                  "Index":  59,
+                                                                  "Length":  20,
+                                                                  "Value":  "fetchAvailableModels"
+                                                              }
+                                                          ],
+                                               "Success":  true,
+                                               "Name":  "0",
+                                               "Captures":  [
+                                                                {
+                                                                    "Groups":  [
+                                                                                   {
+                                                                                       "Groups":  [
+                                                                                                      {
+                                                                                                          "Groups":  "fetchAvailableModels",
+                                                                                                          "Success":  true,
+                                                                                                          "Name":  "0",
+                                                                                                          "Captures":  "fetchAvailableModels",
+                                                                                                          "Index":  59,
+                                                                                                          "Length":  20,
+                                                                                                          "Value":  "fetchAvailableModels"
+                                                                                                      }
+                                                                                                  ],
+                                                                                       "Success":  true,
+                                                                                       "Name":  "0",
+                                                                                       "Captures":  [
+                                                                                                        {
+                                                                                                            "Groups":  "fetchAvailableModels",
+                                                                                                            "Success":  true,
+                                                                                                            "Name":  "0",
+                                                                                                            "Captures":  "fetchAvailableModels",
+                                                                                                            "Index":  59,
+                                                                                                            "Length":  20,
+                                                                                                            "Value":  "fetchAvailableModels"
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "Index":  59,
+                                                                                       "Length":  20,
+                                                                                       "Value":  "fetchAvailableModels"
+                                                                                   }
+                                                                               ],
+                                                                    "Success":  true,
+                                                                    "Name":  "0",
+                                                                    "Captures":  [
+                                                                                     {
+                                                                                         "Groups":  [
+                                                                                                        {
+                                                                                                            "Groups":  "fetchAvailableModels",
+                                                                                                            "Success":  true,
+                                                                                                            "Name":  "0",
+                                                                                                            "Captures":  "fetchAvailableModels",
+                                                                                                            "Index":  59,
+                                                                                                            "Length":  20,
+                                                                                                            "Value":  "fetchAvailableModels"
+                                                                                                        }
+                                                                                                    ],
+                                                                                         "Success":  true,
+                                                                                         "Name":  "0",
+                                                                                         "Captures":  [
+                                                                                                          {
+                                                                                                              "Groups":  "fetchAvailableModels",
+                                                                                                              "Success":  true,
+                                                                                                              "Name":  "0",
+                                                                                                              "Captures":  "fetchAvailableModels",
+                                                                                                              "Index":  59,
+                                                                                                              "Length":  20,
+                                                                                                              "Value":  "fetchAvailableModels"
+                                                                                                          }
+                                                                                                      ],
+                                                                                         "Index":  59,
+                                                                                         "Length":  20,
+                                                                                         "Value":  "fetchAvailableModels"
+                                                                                     }
+                                                                                 ],
+                                                                    "Index":  59,
+                                                                    "Length":  20,
+                                                                    "Value":  "fetchAvailableModels"
+                                                                }
+                                                            ],
+                                               "Index":  59,
+                                               "Length":  20,
+                                               "Value":  "fetchAvailableModels"
+                                           }
+                                       ]
+                       },
+                       {
+                           "IgnoreCase":  true,
+                           "LineNumber":  18,
+                           "Line":  "2026-04-03 09:25:40.466 [info] [CloudCode] POST v1internal:fetchAvailableModels traceId: 569e2cf654cece91",
+                           "Filename":  "InputStream",
+                           "Path":  "InputStream",
+                           "Pattern":  "fetchAvailableModels|model",
+                           "Context":  null,
+                           "Matches":  [
+                                           {
+                                               "Groups":  [
+                                                              {
+                                                                  "Groups":  [
+                                                                                 {
+                                                                                     "Groups":  [
+                                                                                                    {
+                                                                                                        "Groups":  "fetchAvailableModels",
+                                                                                                        "Success":  true,
+                                                                                                        "Name":  "0",
+                                                                                                        "Captures":  "fetchAvailableModels",
+                                                                                                        "Index":  59,
+                                                                                                        "Length":  20,
+                                                                                                        "Value":  "fetchAvailableModels"
+                                                                                                    }
+                                                                                                ],
+                                                                                     "Success":  true,
+                                                                                     "Name":  "0",
+                                                                                     "Captures":  [
+                                                                                                      {
+                                                                                                          "Groups":  "fetchAvailableModels",
+                                                                                                          "Success":  true,
+                                                                                                          "Name":  "0",
+                                                                                                          "Captures":  "fetchAvailableModels",
+                                                                                                          "Index":  59,
+                                                                                                          "Length":  20,
+                                                                                                          "Value":  "fetchAvailableModels"
+                                                                                                      }
+                                                                                                  ],
+                                                                                     "Index":  59,
+                                                                                     "Length":  20,
+                                                                                     "Value":  "fetchAvailableModels"
+                                                                                 }
+                                                                             ],
+                                                                  "Success":  true,
+                                                                  "Name":  "0",
+                                                                  "Captures":  [
+                                                                                   {
+                                                                                       "Groups":  [
+                                                                                                      {
+                                                                                                          "Groups":  "fetchAvailableModels",
+                                                                                                          "Success":  true,
+                                                                                                          "Name":  "0",
+                                                                                                          "Captures":  "fetchAvailableModels",
+                                                                                                          "Index":  59,
+                                                                                                          "Length":  20,
+                                                                                                          "Value":  "fetchAvailableModels"
+                                                                                                      }
+                                                                                                  ],
+                                                                                       "Success":  true,
+                                                                                       "Name":  "0",
+                                                                                       "Captures":  [
+                                                                                                        {
+                                                                                                            "Groups":  "fetchAvailableModels",
+                                                                                                            "Success":  true,
+                                                                                                            "Name":  "0",
+                                                                                                            "Captures":  "fetchAvailableModels",
+                                                                                                            "Index":  59,
+                                                                                                            "Length":  20,
+                                                                                                            "Value":  "fetchAvailableModels"
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "Index":  59,
+                                                                                       "Length":  20,
+                                                                                       "Value":  "fetchAvailableModels"
+                                                                                   }
+                                                                               ],
+                                                                  "Index":  59,
+                                                                  "Length":  20,
+                                                                  "Value":  "fetchAvailableModels"
+                                                              }
+                                                          ],
+                                               "Success":  true,
+                                               "Name":  "0",
+                                               "Captures":  [
+                                                                {
+                                                                    "Groups":  [
+                                                                                   {
+                                                                                       "Groups":  [
+                                                                                                      {
+                                                                                                          "Groups":  "fetchAvailableModels",
+                                                                                                          "Success":  true,
+                                                                                                          "Name":  "0",
+                                                                                                          "Captures":  "fetchAvailableModels",
+                                                                                                          "Index":  59,
+                                                                                                          "Length":  20,
+                                                                                                          "Value":  "fetchAvailableModels"
+                                                                                                      }
+                                                                                                  ],
+                                                                                       "Success":  true,
+                                                                                       "Name":  "0",
+                                                                                       "Captures":  [
+                                                                                                        {
+                                                                                                            "Groups":  "fetchAvailableModels",
+                                                                                                            "Success":  true,
+                                                                                                            "Name":  "0",
+                                                                                                            "Captures":  "fetchAvailableModels",
+                                                                                                            "Index":  59,
+                                                                                                            "Length":  20,
+                                                                                                            "Value":  "fetchAvailableModels"
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "Index":  59,
+                                                                                       "Length":  20,
+                                                                                       "Value":  "fetchAvailableModels"
+                                                                                   }
+                                                                               ],
+                                                                    "Success":  true,
+                                                                    "Name":  "0",
+                                                                    "Captures":  [
+                                                                                     {
+                                                                                         "Groups":  [
+                                                                                                        {
+                                                                                                            "Groups":  "fetchAvailableModels",
+                                                                                                            "Success":  true,
+                                                                                                            "Name":  "0",
+                                                                                                            "Captures":  "fetchAvailableModels",
+                                                                                                            "Index":  59,
+                                                                                                            "Length":  20,
+                                                                                                            "Value":  "fetchAvailableModels"
+                                                                                                        }
+                                                                                                    ],
+                                                                                         "Success":  true,
+                                                                                         "Name":  "0",
+                                                                                         "Captures":  [
+                                                                                                          {
+                                                                                                              "Groups":  "fetchAvailableModels",
+                                                                                                              "Success":  true,
+                                                                                                              "Name":  "0",
+                                                                                                              "Captures":  "fetchAvailableModels",
+                                                                                                              "Index":  59,
+                                                                                                              "Length":  20,
+                                                                                                              "Value":  "fetchAvailableModels"
+                                                                                                          }
+                                                                                                      ],
+                                                                                         "Index":  59,
+                                                                                         "Length":  20,
+                                                                                         "Value":  "fetchAvailableModels"
+                                                                                     }
+                                                                                 ],
+                                                                    "Index":  59,
+                                                                    "Length":  20,
+                                                                    "Value":  "fetchAvailableModels"
+                                                                }
+                                                            ],
+                                               "Index":  59,
+                                               "Length":  20,
+                                               "Value":  "fetchAvailableModels"
+                                           }
+                                       ]
+                       },
+                       {
+                           "IgnoreCase":  true,
+                           "LineNumber":  21,
+                           "Line":  "2026-04-03 09:30:40.470 [info] [CloudCode] POST v1internal:fetchAvailableModels traceId: 4919fde163039530",
+                           "Filename":  "InputStream",
+                           "Path":  "InputStream",
+                           "Pattern":  "fetchAvailableModels|model",
+                           "Context":  null,
+                           "Matches":  [
+                                           {
+                                               "Groups":  [
+                                                              {
+                                                                  "Groups":  [
+                                                                                 {
+                                                                                     "Groups":  [
+                                                                                                    {
+                                                                                                        "Groups":  "fetchAvailableModels",
+                                                                                                        "Success":  true,
+                                                                                                        "Name":  "0",
+                                                                                                        "Captures":  "fetchAvailableModels",
+                                                                                                        "Index":  59,
+                                                                                                        "Length":  20,
+                                                                                                        "Value":  "fetchAvailableModels"
+                                                                                                    }
+                                                                                                ],
+                                                                                     "Success":  true,
+                                                                                     "Name":  "0",
+                                                                                     "Captures":  [
+                                                                                                      {
+                                                                                                          "Groups":  "fetchAvailableModels",
+                                                                                                          "Success":  true,
+                                                                                                          "Name":  "0",
+                                                                                                          "Captures":  "fetchAvailableModels",
+                                                                                                          "Index":  59,
+                                                                                                          "Length":  20,
+                                                                                                          "Value":  "fetchAvailableModels"
+                                                                                                      }
+                                                                                                  ],
+                                                                                     "Index":  59,
+                                                                                     "Length":  20,
+                                                                                     "Value":  "fetchAvailableModels"
+                                                                                 }
+                                                                             ],
+                                                                  "Success":  true,
+                                                                  "Name":  "0",
+                                                                  "Captures":  [
+                                                                                   {
+                                                                                       "Groups":  [
+                                                                                                      {
+                                                                                                          "Groups":  "fetchAvailableModels",
+                                                                                                          "Success":  true,
+                                                                                                          "Name":  "0",
+                                                                                                          "Captures":  "fetchAvailableModels",
+                                                                                                          "Index":  59,
+                                                                                                          "Length":  20,
+                                                                                                          "Value":  "fetchAvailableModels"
+                                                                                                      }
+                                                                                                  ],
+                                                                                       "Success":  true,
+                                                                                       "Name":  "0",
+                                                                                       "Captures":  [
+                                                                                                        {
+                                                                                                            "Groups":  "fetchAvailableModels",
+                                                                                                            "Success":  true,
+                                                                                                            "Name":  "0",
+                                                                                                            "Captures":  "fetchAvailableModels",
+                                                                                                            "Index":  59,
+                                                                                                            "Length":  20,
+                                                                                                            "Value":  "fetchAvailableModels"
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "Index":  59,
+                                                                                       "Length":  20,
+                                                                                       "Value":  "fetchAvailableModels"
+                                                                                   }
+                                                                               ],
+                                                                  "Index":  59,
+                                                                  "Length":  20,
+                                                                  "Value":  "fetchAvailableModels"
+                                                              }
+                                                          ],
+                                               "Success":  true,
+                                               "Name":  "0",
+                                               "Captures":  [
+                                                                {
+                                                                    "Groups":  [
+                                                                                   {
+                                                                                       "Groups":  [
+                                                                                                      {
+                                                                                                          "Groups":  "fetchAvailableModels",
+                                                                                                          "Success":  true,
+                                                                                                          "Name":  "0",
+                                                                                                          "Captures":  "fetchAvailableModels",
+                                                                                                          "Index":  59,
+                                                                                                          "Length":  20,
+                                                                                                          "Value":  "fetchAvailableModels"
+                                                                                                      }
+                                                                                                  ],
+                                                                                       "Success":  true,
+                                                                                       "Name":  "0",
+                                                                                       "Captures":  [
+                                                                                                        {
+                                                                                                            "Groups":  "fetchAvailableModels",
+                                                                                                            "Success":  true,
+                                                                                                            "Name":  "0",
+                                                                                                            "Captures":  "fetchAvailableModels",
+                                                                                                            "Index":  59,
+                                                                                                            "Length":  20,
+                                                                                                            "Value":  "fetchAvailableModels"
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "Index":  59,
+                                                                                       "Length":  20,
+                                                                                       "Value":  "fetchAvailableModels"
+                                                                                   }
+                                                                               ],
+                                                                    "Success":  true,
+                                                                    "Name":  "0",
+                                                                    "Captures":  [
+                                                                                     {
+                                                                                         "Groups":  [
+                                                                                                        {
+                                                                                                            "Groups":  "fetchAvailableModels",
+                                                                                                            "Success":  true,
+                                                                                                            "Name":  "0",
+                                                                                                            "Captures":  "fetchAvailableModels",
+                                                                                                            "Index":  59,
+                                                                                                            "Length":  20,
+                                                                                                            "Value":  "fetchAvailableModels"
+                                                                                                        }
+                                                                                                    ],
+                                                                                         "Success":  true,
+                                                                                         "Name":  "0",
+                                                                                         "Captures":  [
+                                                                                                          {
+                                                                                                              "Groups":  "fetchAvailableModels",
+                                                                                                              "Success":  true,
+                                                                                                              "Name":  "0",
+                                                                                                              "Captures":  "fetchAvailableModels",
+                                                                                                              "Index":  59,
+                                                                                                              "Length":  20,
+                                                                                                              "Value":  "fetchAvailableModels"
+                                                                                                          }
+                                                                                                      ],
+                                                                                         "Index":  59,
+                                                                                         "Length":  20,
+                                                                                         "Value":  "fetchAvailableModels"
+                                                                                     }
+                                                                                 ],
+                                                                    "Index":  59,
+                                                                    "Length":  20,
+                                                                    "Value":  "fetchAvailableModels"
+                                                                }
+                                                            ],
+                                               "Index":  59,
+                                               "Length":  20,
+                                               "Value":  "fetchAvailableModels"
+                                           }
+                                       ]
+                       },
+                       {
+                           "IgnoreCase":  true,
+                           "LineNumber":  24,
+                           "Line":  "2026-04-03 09:35:40.384 [info] [CloudCode] POST v1internal:fetchAvailableModels traceId: 9d0d9c0c2d90289",
+                           "Filename":  "InputStream",
+                           "Path":  "InputStream",
+                           "Pattern":  "fetchAvailableModels|model",
+                           "Context":  null,
+                           "Matches":  [
+                                           {
+                                               "Groups":  [
+                                                              {
+                                                                  "Groups":  [
+                                                                                 {
+                                                                                     "Groups":  [
+                                                                                                    {
+                                                                                                        "Groups":  "fetchAvailableModels",
+                                                                                                        "Success":  true,
+                                                                                                        "Name":  "0",
+                                                                                                        "Captures":  "fetchAvailableModels",
+                                                                                                        "Index":  59,
+                                                                                                        "Length":  20,
+                                                                                                        "Value":  "fetchAvailableModels"
+                                                                                                    }
+                                                                                                ],
+                                                                                     "Success":  true,
+                                                                                     "Name":  "0",
+                                                                                     "Captures":  [
+                                                                                                      {
+                                                                                                          "Groups":  "fetchAvailableModels",
+                                                                                                          "Success":  true,
+                                                                                                          "Name":  "0",
+                                                                                                          "Captures":  "fetchAvailableModels",
+                                                                                                          "Index":  59,
+                                                                                                          "Length":  20,
+                                                                                                          "Value":  "fetchAvailableModels"
+                                                                                                      }
+                                                                                                  ],
+                                                                                     "Index":  59,
+                                                                                     "Length":  20,
+                                                                                     "Value":  "fetchAvailableModels"
+                                                                                 }
+                                                                             ],
+                                                                  "Success":  true,
+                                                                  "Name":  "0",
+                                                                  "Captures":  [
+                                                                                   {
+                                                                                       "Groups":  [
+                                                                                                      {
+                                                                                                          "Groups":  "fetchAvailableModels",
+                                                                                                          "Success":  true,
+                                                                                                          "Name":  "0",
+                                                                                                          "Captures":  "fetchAvailableModels",
+                                                                                                          "Index":  59,
+                                                                                                          "Length":  20,
+                                                                                                          "Value":  "fetchAvailableModels"
+                                                                                                      }
+                                                                                                  ],
+                                                                                       "Success":  true,
+                                                                                       "Name":  "0",
+                                                                                       "Captures":  [
+                                                                                                        {
+                                                                                                            "Groups":  "fetchAvailableModels",
+                                                                                                            "Success":  true,
+                                                                                                            "Name":  "0",
+                                                                                                            "Captures":  "fetchAvailableModels",
+                                                                                                            "Index":  59,
+                                                                                                            "Length":  20,
+                                                                                                            "Value":  "fetchAvailableModels"
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "Index":  59,
+                                                                                       "Length":  20,
+                                                                                       "Value":  "fetchAvailableModels"
+                                                                                   }
+                                                                               ],
+                                                                  "Index":  59,
+                                                                  "Length":  20,
+                                                                  "Value":  "fetchAvailableModels"
+                                                              }
+                                                          ],
+                                               "Success":  true,
+                                               "Name":  "0",
+                                               "Captures":  [
+                                                                {
+                                                                    "Groups":  [
+                                                                                   {
+                                                                                       "Groups":  [
+                                                                                                      {
+                                                                                                          "Groups":  "fetchAvailableModels",
+                                                                                                          "Success":  true,
+                                                                                                          "Name":  "0",
+                                                                                                          "Captures":  "fetchAvailableModels",
+                                                                                                          "Index":  59,
+                                                                                                          "Length":  20,
+                                                                                                          "Value":  "fetchAvailableModels"
+                                                                                                      }
+                                                                                                  ],
+                                                                                       "Success":  true,
+                                                                                       "Name":  "0",
+                                                                                       "Captures":  [
+                                                                                                        {
+                                                                                                            "Groups":  "fetchAvailableModels",
+                                                                                                            "Success":  true,
+                                                                                                            "Name":  "0",
+                                                                                                            "Captures":  "fetchAvailableModels",
+                                                                                                            "Index":  59,
+                                                                                                            "Length":  20,
+                                                                                                            "Value":  "fetchAvailableModels"
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "Index":  59,
+                                                                                       "Length":  20,
+                                                                                       "Value":  "fetchAvailableModels"
+                                                                                   }
+                                                                               ],
+                                                                    "Success":  true,
+                                                                    "Name":  "0",
+                                                                    "Captures":  [
+                                                                                     {
+                                                                                         "Groups":  [
+                                                                                                        {
+                                                                                                            "Groups":  "fetchAvailableModels",
+                                                                                                            "Success":  true,
+                                                                                                            "Name":  "0",
+                                                                                                            "Captures":  "fetchAvailableModels",
+                                                                                                            "Index":  59,
+                                                                                                            "Length":  20,
+                                                                                                            "Value":  "fetchAvailableModels"
+                                                                                                        }
+                                                                                                    ],
+                                                                                         "Success":  true,
+                                                                                         "Name":  "0",
+                                                                                         "Captures":  [
+                                                                                                          {
+                                                                                                              "Groups":  "fetchAvailableModels",
+                                                                                                              "Success":  true,
+                                                                                                              "Name":  "0",
+                                                                                                              "Captures":  "fetchAvailableModels",
+                                                                                                              "Index":  59,
+                                                                                                              "Length":  20,
+                                                                                                              "Value":  "fetchAvailableModels"
+                                                                                                          }
+                                                                                                      ],
+                                                                                         "Index":  59,
+                                                                                         "Length":  20,
+                                                                                         "Value":  "fetchAvailableModels"
+                                                                                     }
+                                                                                 ],
+                                                                    "Index":  59,
+                                                                    "Length":  20,
+                                                                    "Value":  "fetchAvailableModels"
+                                                                }
+                                                            ],
+                                               "Index":  59,
+                                               "Length":  20,
+                                               "Value":  "fetchAvailableModels"
+                                           }
+                                       ]
+                       },
+                       {
+                           "IgnoreCase":  true,
+                           "LineNumber":  27,
+                           "Line":  "2026-04-03 09:40:40.584 [info] [CloudCode] POST v1internal:fetchAvailableModels traceId: 95f0f46e0482f54b",
+                           "Filename":  "InputStream",
+                           "Path":  "InputStream",
+                           "Pattern":  "fetchAvailableModels|model",
+                           "Context":  null,
+                           "Matches":  [
+                                           {
+                                               "Groups":  [
+                                                              {
+                                                                  "Groups":  [
+                                                                                 {
+                                                                                     "Groups":  [
+                                                                                                    {
+                                                                                                        "Groups":  "fetchAvailableModels",
+                                                                                                        "Success":  true,
+                                                                                                        "Name":  "0",
+                                                                                                        "Captures":  "fetchAvailableModels",
+                                                                                                        "Index":  59,
+                                                                                                        "Length":  20,
+                                                                                                        "Value":  "fetchAvailableModels"
+                                                                                                    }
+                                                                                                ],
+                                                                                     "Success":  true,
+                                                                                     "Name":  "0",
+                                                                                     "Captures":  [
+                                                                                                      {
+                                                                                                          "Groups":  "fetchAvailableModels",
+                                                                                                          "Success":  true,
+                                                                                                          "Name":  "0",
+                                                                                                          "Captures":  "fetchAvailableModels",
+                                                                                                          "Index":  59,
+                                                                                                          "Length":  20,
+                                                                                                          "Value":  "fetchAvailableModels"
+                                                                                                      }
+                                                                                                  ],
+                                                                                     "Index":  59,
+                                                                                     "Length":  20,
+                                                                                     "Value":  "fetchAvailableModels"
+                                                                                 }
+                                                                             ],
+                                                                  "Success":  true,
+                                                                  "Name":  "0",
+                                                                  "Captures":  [
+                                                                                   {
+                                                                                       "Groups":  [
+                                                                                                      {
+                                                                                                          "Groups":  "fetchAvailableModels",
+                                                                                                          "Success":  true,
+                                                                                                          "Name":  "0",
+                                                                                                          "Captures":  "fetchAvailableModels",
+                                                                                                          "Index":  59,
+                                                                                                          "Length":  20,
+                                                                                                          "Value":  "fetchAvailableModels"
+                                                                                                      }
+                                                                                                  ],
+                                                                                       "Success":  true,
+                                                                                       "Name":  "0",
+                                                                                       "Captures":  [
+                                                                                                        {
+                                                                                                            "Groups":  "fetchAvailableModels",
+                                                                                                            "Success":  true,
+                                                                                                            "Name":  "0",
+                                                                                                            "Captures":  "fetchAvailableModels",
+                                                                                                            "Index":  59,
+                                                                                                            "Length":  20,
+                                                                                                            "Value":  "fetchAvailableModels"
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "Index":  59,
+                                                                                       "Length":  20,
+                                                                                       "Value":  "fetchAvailableModels"
+                                                                                   }
+                                                                               ],
+                                                                  "Index":  59,
+                                                                  "Length":  20,
+                                                                  "Value":  "fetchAvailableModels"
+                                                              }
+                                                          ],
+                                               "Success":  true,
+                                               "Name":  "0",
+                                               "Captures":  [
+                                                                {
+                                                                    "Groups":  [
+                                                                                   {
+                                                                                       "Groups":  [
+                                                                                                      {
+                                                                                                          "Groups":  "fetchAvailableModels",
+                                                                                                          "Success":  true,
+                                                                                                          "Name":  "0",
+                                                                                                          "Captures":  "fetchAvailableModels",
+                                                                                                          "Index":  59,
+                                                                                                          "Length":  20,
+                                                                                                          "Value":  "fetchAvailableModels"
+                                                                                                      }
+                                                                                                  ],
+                                                                                       "Success":  true,
+                                                                                       "Name":  "0",
+                                                                                       "Captures":  [
+                                                                                                        {
+                                                                                                            "Groups":  "fetchAvailableModels",
+                                                                                                            "Success":  true,
+                                                                                                            "Name":  "0",
+                                                                                                            "Captures":  "fetchAvailableModels",
+                                                                                                            "Index":  59,
+                                                                                                            "Length":  20,
+                                                                                                            "Value":  "fetchAvailableModels"
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "Index":  59,
+                                                                                       "Length":  20,
+                                                                                       "Value":  "fetchAvailableModels"
+                                                                                   }
+                                                                               ],
+                                                                    "Success":  true,
+                                                                    "Name":  "0",
+                                                                    "Captures":  [
+                                                                                     {
+                                                                                         "Groups":  [
+                                                                                                        {
+                                                                                                            "Groups":  "fetchAvailableModels",
+                                                                                                            "Success":  true,
+                                                                                                            "Name":  "0",
+                                                                                                            "Captures":  "fetchAvailableModels",
+                                                                                                            "Index":  59,
+                                                                                                            "Length":  20,
+                                                                                                            "Value":  "fetchAvailableModels"
+                                                                                                        }
+                                                                                                    ],
+                                                                                         "Success":  true,
+                                                                                         "Name":  "0",
+                                                                                         "Captures":  [
+                                                                                                          {
+                                                                                                              "Groups":  "fetchAvailableModels",
+                                                                                                              "Success":  true,
+                                                                                                              "Name":  "0",
+                                                                                                              "Captures":  "fetchAvailableModels",
+                                                                                                              "Index":  59,
+                                                                                                              "Length":  20,
+                                                                                                              "Value":  "fetchAvailableModels"
+                                                                                                          }
+                                                                                                      ],
+                                                                                         "Index":  59,
+                                                                                         "Length":  20,
+                                                                                         "Value":  "fetchAvailableModels"
+                                                                                     }
+                                                                                 ],
+                                                                    "Index":  59,
+                                                                    "Length":  20,
+                                                                    "Value":  "fetchAvailableModels"
+                                                                }
+                                                            ],
+                                               "Index":  59,
+                                               "Length":  20,
+                                               "Value":  "fetchAvailableModels"
+                                           }
+                                       ]
+                       },
+                       {
+                           "IgnoreCase":  true,
+                           "LineNumber":  30,
+                           "Line":  "2026-04-03 09:45:40.381 [info] [CloudCode] POST v1internal:fetchAvailableModels traceId: cb2edb949cb09e34",
+                           "Filename":  "InputStream",
+                           "Path":  "InputStream",
+                           "Pattern":  "fetchAvailableModels|model",
+                           "Context":  null,
+                           "Matches":  [
+                                           {
+                                               "Groups":  [
+                                                              {
+                                                                  "Groups":  [
+                                                                                 {
+                                                                                     "Groups":  [
+                                                                                                    {
+                                                                                                        "Groups":  "fetchAvailableModels",
+                                                                                                        "Success":  true,
+                                                                                                        "Name":  "0",
+                                                                                                        "Captures":  "fetchAvailableModels",
+                                                                                                        "Index":  59,
+                                                                                                        "Length":  20,
+                                                                                                        "Value":  "fetchAvailableModels"
+                                                                                                    }
+                                                                                                ],
+                                                                                     "Success":  true,
+                                                                                     "Name":  "0",
+                                                                                     "Captures":  [
+                                                                                                      {
+                                                                                                          "Groups":  "fetchAvailableModels",
+                                                                                                          "Success":  true,
+                                                                                                          "Name":  "0",
+                                                                                                          "Captures":  "fetchAvailableModels",
+                                                                                                          "Index":  59,
+                                                                                                          "Length":  20,
+                                                                                                          "Value":  "fetchAvailableModels"
+                                                                                                      }
+                                                                                                  ],
+                                                                                     "Index":  59,
+                                                                                     "Length":  20,
+                                                                                     "Value":  "fetchAvailableModels"
+                                                                                 }
+                                                                             ],
+                                                                  "Success":  true,
+                                                                  "Name":  "0",
+                                                                  "Captures":  [
+                                                                                   {
+                                                                                       "Groups":  [
+                                                                                                      {
+                                                                                                          "Groups":  "fetchAvailableModels",
+                                                                                                          "Success":  true,
+                                                                                                          "Name":  "0",
+                                                                                                          "Captures":  "fetchAvailableModels",
+                                                                                                          "Index":  59,
+                                                                                                          "Length":  20,
+                                                                                                          "Value":  "fetchAvailableModels"
+                                                                                                      }
+                                                                                                  ],
+                                                                                       "Success":  true,
+                                                                                       "Name":  "0",
+                                                                                       "Captures":  [
+                                                                                                        {
+                                                                                                            "Groups":  "fetchAvailableModels",
+                                                                                                            "Success":  true,
+                                                                                                            "Name":  "0",
+                                                                                                            "Captures":  "fetchAvailableModels",
+                                                                                                            "Index":  59,
+                                                                                                            "Length":  20,
+                                                                                                            "Value":  "fetchAvailableModels"
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "Index":  59,
+                                                                                       "Length":  20,
+                                                                                       "Value":  "fetchAvailableModels"
+                                                                                   }
+                                                                               ],
+                                                                  "Index":  59,
+                                                                  "Length":  20,
+                                                                  "Value":  "fetchAvailableModels"
+                                                              }
+                                                          ],
+                                               "Success":  true,
+                                               "Name":  "0",
+                                               "Captures":  [
+                                                                {
+                                                                    "Groups":  [
+                                                                                   {
+                                                                                       "Groups":  [
+                                                                                                      {
+                                                                                                          "Groups":  "fetchAvailableModels",
+                                                                                                          "Success":  true,
+                                                                                                          "Name":  "0",
+                                                                                                          "Captures":  "fetchAvailableModels",
+                                                                                                          "Index":  59,
+                                                                                                          "Length":  20,
+                                                                                                          "Value":  "fetchAvailableModels"
+                                                                                                      }
+                                                                                                  ],
+                                                                                       "Success":  true,
+                                                                                       "Name":  "0",
+                                                                                       "Captures":  [
+                                                                                                        {
+                                                                                                            "Groups":  "fetchAvailableModels",
+                                                                                                            "Success":  true,
+                                                                                                            "Name":  "0",
+                                                                                                            "Captures":  "fetchAvailableModels",
+                                                                                                            "Index":  59,
+                                                                                                            "Length":  20,
+                                                                                                            "Value":  "fetchAvailableModels"
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "Index":  59,
+                                                                                       "Length":  20,
+                                                                                       "Value":  "fetchAvailableModels"
+                                                                                   }
+                                                                               ],
+                                                                    "Success":  true,
+                                                                    "Name":  "0",
+                                                                    "Captures":  [
+                                                                                     {
+                                                                                         "Groups":  [
+                                                                                                        {
+                                                                                                            "Groups":  "fetchAvailableModels",
+                                                                                                            "Success":  true,
+                                                                                                            "Name":  "0",
+                                                                                                            "Captures":  "fetchAvailableModels",
+                                                                                                            "Index":  59,
+                                                                                                            "Length":  20,
+                                                                                                            "Value":  "fetchAvailableModels"
+                                                                                                        }
+                                                                                                    ],
+                                                                                         "Success":  true,
+                                                                                         "Name":  "0",
+                                                                                         "Captures":  [
+                                                                                                          {
+                                                                                                              "Groups":  "fetchAvailableModels",
+                                                                                                              "Success":  true,
+                                                                                                              "Name":  "0",
+                                                                                                              "Captures":  "fetchAvailableModels",
+                                                                                                              "Index":  59,
+                                                                                                              "Length":  20,
+                                                                                                              "Value":  "fetchAvailableModels"
+                                                                                                          }
+                                                                                                      ],
+                                                                                         "Index":  59,
+                                                                                         "Length":  20,
+                                                                                         "Value":  "fetchAvailableModels"
+                                                                                     }
+                                                                                 ],
+                                                                    "Index":  59,
+                                                                    "Length":  20,
+                                                                    "Value":  "fetchAvailableModels"
+                                                                }
+                                                            ],
+                                               "Index":  59,
+                                               "Length":  20,
+                                               "Value":  "fetchAvailableModels"
+                                           }
+                                       ]
+                       }
+                   ],
+    "allowedCommands":  "[\"Cg5HZW1pbmkgMyBGbGFzaBIDCPoHKAFYAWIGAgEFAwQIeg0NAACAPxIGCJ/vws0GkgEUChBhcHBsaWNhdGlvbi9qc29uEAGSARMKD2FwcGxpY2F0aW9uL3BkZhABkgETCg9hcHBsaWNhdGlvbi9ydGYQAZIBHAoYYXBwbGljYXRpb24veC1pcHluYitqc29uEAGSARwKGGFwcGxpY2F0aW9uL3gtamF2YXNjcmlwdBABkgEdChlhcHBsaWNhdGlvbi94LXB5dGhvbi1jb2RlEAGSARwKGGFwcGxpY2F0aW9uL3gtdHlwZXNjcmlwdBABkgEaChZhdWRpby93ZWJtO2NvZGVjcz1vcHVzEAGSAQ4KCmltYWdlL2hlaWMQAZIBDgoKaW1hZ2UvaGVpZhABkgEOCgppbWFnZS9qcGVnEAGSAQ0KCWltYWdlL3BuZxABkgEOCgppbWFnZS93ZWJwEAGSAQwKCHRleHQvY3NzEAGSAQwKCHRleHQvY3N2EAGSAQ0KCXRleHQvaHRtbBABkgETCg90ZXh0L2phdmFzY3JpcHQQAZIBEQoNdGV4dC9tYXJrZG93bhABkgEOCgp0ZXh0L3BsYWluEAGSAQwKCHRleHQvcnRmEAGSAREKDXRleHQveC1weXRob24QAZIBGAoUdGV4dC94LXB5dGhvbi1zY3JpcHQQAZIBFQoRdGV4dC94LXR5cGVzY3JpcHQQAZIBDAoIdGV4dC94bWwQAZIBFQoRdmlkZW8vYXVkaW8vczE2bGUQAZIBEwoPdmlkZW8vYXVkaW8vd2F2EAGSARIKDnZpZGVvL2pwZWcyMDAwEAGSAQ0KCXZpZGVvL21wNBABkgEYChR2aWRlby90ZXh0L3RpbWVzdGFtcBABkgEdChl2aWRlby92aWRlb2ZyYW1lL2pwZWcyMDAwEAGSAQ4KCnZpZGVvL3dlYm0QAQ==\"]"
+}

@@ -74,25 +74,49 @@ else
     CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/opencode"
 fi
 
-# ---- 4. Limpar credenciais existentes ----------------------------------------
-write_step "Limpeza de credenciais existentes..."
+# ---- 4. Limpar credenciais existentes (apenas Google) ------------------------
+write_step "Limpeza de credenciais do Google..."
 echo ""
-echo -e "  ${WHITE}Deseja remover credenciais antigas antes de instalar?${NC}"
-echo -e "  ${YELLOW}(Recomendado se voce teve erros de autenticacao ou 403)${NC}"
+echo -e " ${WHITE}Deseja remover credenciais do Google antes de instalar?${NC}"
+echo -e " ${YELLOW}(Recomendado se voce teve erros de autenticacao ou 403)${NC}"
 echo ""
-echo "  [S] Sim - limpar tudo e comecar do zero (recomendado)"
-echo "  [N] Nao - manter credenciais existentes"
+echo " [S] Sim - limpar credenciais do Google"
+echo " [N] Nao - manter credenciais existentes"
 echo ""
-read -r -p "  Opcao [S/N]: " CLEAN_CHOICE
+read -r -p " Opcao [S/N]: " CLEAN_CHOICE
 
 if [[ "$CLEAN_CHOICE" =~ ^[Ss] ]]; then
     ACCOUNTS_FILE="$CONFIG_DIR/antigravity-accounts.json"
-    AUTH_FILE="$HOME/.local/share/opencode/auth.json"
-
+    
     [ -f "$ACCOUNTS_FILE" ] && rm -f "$ACCOUNTS_FILE" && write_ok "Removido: $ACCOUNTS_FILE"
-    [ -f "$AUTH_FILE"      ] && rm -f "$AUTH_FILE"      && write_ok "Removido: $AUTH_FILE"
-    [ -d "$CACHE_DIR"      ] && rm -rf "$CACHE_DIR"     && write_ok "Cache limpo: $CACHE_DIR"
-    write_ok "Credenciais removidas - instalacao limpa"
+    
+    AUTH_FILE="$HOME/.local/share/opencode/auth.json"
+    if [ -f "$AUTH_FILE" ]; then
+        if command -v python3 &>/dev/null; then
+            python3 -c "
+import json
+import sys
+try:
+    with open('$AUTH_FILE', 'r') as f:
+        data = json.load(f)
+    if 'google' in data:
+        del data['google']
+        with open('$AUTH_FILE', 'w') as f:
+            json.dump(data, f, indent=2)
+        print('Credenciais do Google removidas de auth.json')
+    else:
+        print('Nenhuma credencial do Google encontrada')
+except Exception as e:
+    print(f'Erro: {e}')
+    sys.exit(1)
+" 2>/dev/null && write_ok "Credenciais do Google removidas de auth.json"
+        else
+            write_warn "python3 nao encontrado - mantendo auth.json"
+        fi
+    fi
+    
+    [ -d "$CACHE_DIR" ] && rm -rf "$CACHE_DIR" && write_ok "Cache limpo: $CACHE_DIR"
+    write_ok "Credenciais do Google removidas - instalacao limpa"
 else
     write_ok "Credenciais mantidas"
 fi
@@ -140,77 +164,94 @@ if [[ ! "$VERIFIED" =~ ^[Ss] ]]; then
     write_warn "Se isso acontecer, faca a verificacao e execute o instalador novamente."
 fi
 
-# ---- 7. Selecao de modelos ---------------------------------------------------
+# ---- 7. Selecao de modelos (dinamico ou fallback) ----------------------------
 write_step "Selecao de modelos..."
-echo ""
-echo "  Quais modelos deseja configurar?"
-echo "  [1] Todos (Gemini 3 Pro/Flash + Claude Opus/Sonnet) - Recomendado"
-echo "  [2] Apenas Gemini (Gemini 3 Pro e Flash)"
-echo "  [3] Apenas Claude (Opus 4.6 Thinking e Sonnet 4.6)"
-echo ""
-read -r -p "  Opcao [1/2/3]: " MODEL_CHOICE
-MODEL_CHOICE="${MODEL_CHOICE:-1}"
 
-ALL_MODELS='    "antigravity-gemini-3-pro": {
-      "name": "Gemini 3 Pro (Antigravity)",
-      "limit": { "context": 1048576, "output": 65535 },
-      "modalities": { "input": ["text","image","pdf"], "output": ["text"] },
-      "variants": { "low": { "thinkingLevel": "low" }, "high": { "thinkingLevel": "high" } }
-    },
-    "antigravity-gemini-3-flash": {
-      "name": "Gemini 3 Flash (Antigravity)",
-      "limit": { "context": 1048576, "output": 65536 },
-      "modalities": { "input": ["text","image","pdf"], "output": ["text"] },
-      "variants": {
-        "minimal": { "thinkingLevel": "minimal" }, "low": { "thinkingLevel": "low" },
-        "medium": { "thinkingLevel": "medium" },   "high": { "thinkingLevel": "high" }
-      }
-    },
-    "antigravity-claude-opus-4-6-thinking": {
-      "name": "Claude Opus 4.6 Thinking (Antigravity)",
-      "limit": { "context": 200000, "output": 64000 },
-      "modalities": { "input": ["text","image","pdf"], "output": ["text"] },
-      "variants": { "low": { "thinkingConfig": { "thinkingBudget": 8192 } }, "max": { "thinkingConfig": { "thinkingBudget": 32768 } } }
-    },
-    "antigravity-claude-sonnet-4-6": {
-      "name": "Claude Sonnet 4.6 (Antigravity)",
-      "limit": { "context": 200000, "output": 64000 },
-      "modalities": { "input": ["text","image","pdf"], "output": ["text"] }
-    }'
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+MODELS_JSON="$SCRIPT_DIR/antigravity_models.json"
 
-GEMINI_MODELS='    "antigravity-gemini-3-pro": {
-      "name": "Gemini 3 Pro (Antigravity)",
-      "limit": { "context": 1048576, "output": 65535 },
-      "modalities": { "input": ["text","image","pdf"], "output": ["text"] },
-      "variants": { "low": { "thinkingLevel": "low" }, "high": { "thinkingLevel": "high" } }
-    },
-    "antigravity-gemini-3-flash": {
-      "name": "Gemini 3 Flash (Antigravity)",
-      "limit": { "context": 1048576, "output": 65536 },
-      "modalities": { "input": ["text","image","pdf"], "output": ["text"] },
-      "variants": {
-        "minimal": { "thinkingLevel": "minimal" }, "low": { "thinkingLevel": "low" },
-        "medium": { "thinkingLevel": "medium" },   "high": { "thinkingLevel": "high" }
-      }
-    }'
+if [ -f "$MODELS_JSON" ]; then
+    write_ok "Modelos dinamicos encontrados em: $MODELS_JSON"
+    SELECTED_MODELS=$(cat "$MODELS_JSON" | python3 -c "import sys, json; print(json.dumps(json.load(sys.stdin), indent=2))" 2>/dev/null || cat "$MODELS_JSON")
+    echo ""
+    echo " Modelos disponiveis (do Antigravity):"
+    echo "$SELECTED_MODELS" | python3 -c "import sys, json; d=json.load(sys.stdin); [print(f'  - {v[\"name\"]}') for k,v in d.items()]" 2>/dev/null || echo "  (lista nao disponivel)"
+else
+    write_warn "antigravity_models.json nao encontrado - usando fallback"
+    echo ""
+    echo " Quais modelos deseja configurar?"
+    echo " [1] Todos (Gemini 3 Pro/Flash + Claude) - Recomendado"
+    echo " [2] Apenas Gemini (Gemini 3 Pro e Flash)"
+    echo " [3] Apenas Claude (Opus 4.6 Thinking e Sonnet 4.6)"
+    echo ""
+    read -r -p " Opcao [1/2/3]: " MODEL_CHOICE
+    MODEL_CHOICE="${MODEL_CHOICE:-1}"
 
-CLAUDE_MODELS='    "antigravity-claude-opus-4-6-thinking": {
-      "name": "Claude Opus 4.6 Thinking (Antigravity)",
-      "limit": { "context": 200000, "output": 64000 },
-      "modalities": { "input": ["text","image","pdf"], "output": ["text"] },
-      "variants": { "low": { "thinkingConfig": { "thinkingBudget": 8192 } }, "max": { "thinkingConfig": { "thinkingBudget": 32768 } } }
-    },
-    "antigravity-claude-sonnet-4-6": {
-      "name": "Claude Sonnet 4.6 (Antigravity)",
-      "limit": { "context": 200000, "output": 64000 },
-      "modalities": { "input": ["text","image","pdf"], "output": ["text"] }
-    }'
+    ALL_MODELS=' "antigravity-gemini-3-pro": {
+"name": "Gemini 3 Pro (Antigravity)",
+"limit": { "context": 1048576, "output": 65535 },
+"modalities": { "input": ["text","image","pdf"], "output": ["text"] },
+"variants": { "low": { "thinkingLevel": "low" }, "high": { "thinkingLevel": "high" } }
+},
+"antigravity-gemini-3-flash": {
+"name": "Gemini 3 Flash (Antigravity)",
+"limit": { "context": 1048576, "output": 65536 },
+"modalities": { "input": ["text","image","pdf"], "output": ["text"] },
+"variants": {
+"minimal": { "thinkingLevel": "minimal" },
+"low": { "thinkingLevel": "low" },
+"medium": { "thinkingLevel": "medium" },
+"high": { "thinkingLevel": "high" }
+}
+},
+"antigravity-claude-opus-4-6-thinking": {
+"name": "Claude Opus 4.6 Thinking (Antigravity)",
+"limit": { "context": 200000, "output": 64000 },
+"modalities": { "input": ["text","image","pdf"], "output": ["text"] },
+"variants": { "low": { "thinkingConfig": { "thinkingBudget": 8192 } }, "max": { "thinkingConfig": { "thinkingBudget": 32768 } } }
+},
+"antigravity-claude-sonnet-4-6": {
+"name": "Claude Sonnet 4.6 (Antigravity)",
+"limit": { "context": 200000, "output": 64000 },
+"modalities": { "input": ["text","image","pdf"], "output": ["text"] }
+}'
 
-case "$MODEL_CHOICE" in
+    GEMINI_MODELS=' "antigravity-gemini-3-pro": {
+"name": "Gemini 3 Pro (Antigravity)",
+"limit": { "context": 1048576, "output": 65535 },
+"modalities": { "input": ["text","image","pdf"], "output": ["text"] },
+"variants": { "low": { "thinkingLevel": "low" }, "high": { "thinkingLevel": "high" } }
+},
+"antigravity-gemini-3-flash": {
+"name": "Gemini 3 Flash (Antigravity)",
+"limit": { "context": 1048576, "output": 65536 },
+"modalities": { "input": ["text","image","pdf"], "output": ["text"] },
+"variants": {
+"minimal": { "thinkingLevel": "minimal" },
+"low": { "thinkingLevel": "low" },
+"medium": { "thinkingLevel": "medium" },
+"high": { "thinkingLevel": "high" }
+}
+}'
+
+    CLAUDE_MODELS=' "antigravity-claude-opus-4-6-thinking": {
+"name": "Claude Opus 4.6 Thinking (Antigravity)",
+"limit": { "context": 200000, "output": 64000 },
+"modalities": { "input": ["text","image","pdf"], "output": ["text"] },
+"variants": { "low": { "thinkingConfig": { "thinkingBudget": 8192 } }, "max": { "thinkingConfig": { "thinkingBudget": 32768 } } }
+},
+"antigravity-claude-sonnet-4-6": {
+"name": "Claude Sonnet 4.6 (Antigravity)",
+"limit": { "context": 200000, "output": 64000 },
+"modalities": { "input": ["text","image","pdf"], "output": ["text"] }
+}'
+
+    case "$MODEL_CHOICE" in
     2) SELECTED_MODELS="$GEMINI_MODELS" ;;
     3) SELECTED_MODELS="$CLAUDE_MODELS" ;;
     *) SELECTED_MODELS="$ALL_MODELS" ;;
-esac
+    esac
+fi
 
 # ---- 8. Criar opencode.json --------------------------------------------------
 write_step "Criando opencode.json..."
@@ -221,19 +262,33 @@ if [ -f "$OPENCODE_JSON" ]; then
     write_warn "opencode.json existente encontrado - sera substituido"
 fi
 
-cat > "$OPENCODE_JSON" <<EOF
+if [ -f "$MODELS_JSON" ]; then
+    cat > "$OPENCODE_JSON" <<EOF
 {
-  "\$schema": "https://opencode.ai/config.json",
-  "plugin": ["opencode-antigravity-auth@latest"],
-  "provider": {
-    "google": {
-      "models": {
-$SELECTED_MODELS
-      }
-    }
-  }
+"\\$schema": "https://opencode.ai/config.json",
+"plugin": ["opencode-antigravity-auth@latest"],
+"provider": {
+"google": {
+"models": $SELECTED_MODELS
+}
+}
 }
 EOF
+else
+    cat > "$OPENCODE_JSON" <<EOF
+{
+"\\$schema": "https://opencode.ai/config.json",
+"plugin": ["opencode-antigravity-auth@latest"],
+"provider": {
+"google": {
+"models": {
+$SELECTED_MODELS
+}
+}
+}
+}
+EOF
+fi
 
 write_ok "opencode.json criado"
 

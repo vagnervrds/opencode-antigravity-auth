@@ -35,42 +35,53 @@ if (-not (Test-Path $configDir)) {
 }
 Write-Ok "Config em: $configDir"
 
-# ---- 3. Limpar credenciais existentes (opcional) -----------------------------------------------------------------------
-Write-Step "Limpeza de credenciais existentes..."
+# ---- 3. Limpar credenciais existentes (apenas Google) -------------------------------------------------------------------
+Write-Step "Limpeza de credenciais do Google..."
 Write-Host ""
-Write-Host "  Deseja remover credenciais antigas antes de instalar?" -ForegroundColor White
-Write-Host "  (Recomendado se voce teve erros de autenticacao ou 403)" -ForegroundColor Yellow
+Write-Host " Deseja remover credenciais do Google antes de instalar?" -ForegroundColor White
+Write-Host " (Recomendado se voce teve erros de autenticacao ou 403)" -ForegroundColor Yellow
 Write-Host ""
-Write-Host "  [S] Sim - limpar tudo e comecar do zero (recomendado)"
-Write-Host "  [N] Nao - manter credenciais existentes"
+Write-Host " [S] Sim - limpar credenciais do Google"
+Write-Host " [N] Nao - manter credenciais existentes"
 Write-Host ""
-$cleanChoice = Read-Host "  Opcao [S/N]"
+$cleanChoice = Read-Host " Opcao [S/N]"
 
 if ($cleanChoice -match "^[Ss]") {
     $accountsFile = "$configDir\antigravity-accounts.json"
-    $authFile     = "$env:LOCALAPPDATA\OpenCode\auth.json"
-    $authFile2    = "$env:USERPROFILE\.local\share\opencode\auth.json"
-    $cacheDir     = "$env:USERPROFILE\.cache\opencode"
-
+    
     if (Test-Path $accountsFile) {
         Remove-Item $accountsFile -Force
         Write-Ok "Removido: $accountsFile"
     }
-    if (Test-Path $authFile) {
-        Remove-Item $authFile -Force
-        Write-Ok "Removido: $authFile"
+    
+    $authFile = "$env:LOCALAPPDATA\OpenCode\auth.json"
+    $authFile2 = "$env:USERPROFILE\.local\share\opencode\auth.json"
+    
+    foreach ($authPath in @($authFile, $authFile2)) {
+        if (Test-Path $authPath) {
+            try {
+                $authData = Get-Content $authPath -Raw | ConvertFrom-Json
+                if ($authData.PSObject.Properties.Name -contains "google") {
+                    $authData.PSObject.Properties.Remove("google")
+                    $authData | ConvertTo-Json -Depth 10 | Set-Content $authPath -Encoding UTF8
+                    Write-Ok "Credenciais do Google removidas de $authPath"
+                } else {
+                    Write-Host "  Nenhuma credencial do Google em $authPath"
+                }
+            } catch {
+                Write-Warn "Erro ao processar $authPath - mantendo arquivo"
+            }
+        }
     }
-    if (Test-Path $authFile2) {
-        Remove-Item $authFile2 -Force
-        Write-Ok "Removido: $authFile2"
-    }
+    
+    $cacheDir = "$env:USERPROFILE\.cache\opencode"
     if (Test-Path $cacheDir) {
         Remove-Item $cacheDir -Recurse -Force
         Write-Ok "Cache limpo: $cacheDir"
     }
-    Write-Ok "Credenciais removidas - instalacao limpa"
+	Write-Ok "Credenciais do Google removidas - instalacao limpa"
 } else {
-    Write-Ok "Credenciais mantidas"
+	Write-Ok "Credenciais mantidas"
 }
 
 # ---- 4. Perguntar conta Google ----------------------------------------------------------------------------------------------------
@@ -116,88 +127,112 @@ if ($verified -notmatch "^[Ss]") {
     Write-Warn "Se isso acontecer, faca a verificacao e execute o instalador novamente."
 }
 
-# ---- 6. Perguntar modelos --------------------------------------------------------------------------------------------------------------
+# ---- 6. Perguntar modelos (dinamico ou fallback) ------------------------------------------------------------------------
 Write-Step "Selecao de modelos..."
-Write-Host ""
-Write-Host "  Quais modelos deseja configurar?"
-Write-Host "  [1] Todos (Gemini 3 Pro/Flash + Claude Opus/Sonnet) - Recomendado"
-Write-Host "  [2] Apenas Gemini (Gemini 3 Pro e Flash)"
-Write-Host "  [3] Apenas Claude (Opus 4.6 Thinking e Sonnet 4.6)"
-Write-Host ""
-$modelChoice = Read-Host "  Opcao [1/2/3]"
-if (-not $modelChoice) { $modelChoice = "1" }
 
-$allModels = @'
-    "antigravity-gemini-3-pro": {
-      "name": "Gemini 3 Pro (Antigravity)",
-      "limit": { "context": 1048576, "output": 65535 },
-      "modalities": { "input": ["text","image","pdf"], "output": ["text"] },
-      "variants": { "low": { "thinkingLevel": "low" }, "high": { "thinkingLevel": "high" } }
-    },
-    "antigravity-gemini-3-flash": {
-      "name": "Gemini 3 Flash (Antigravity)",
-      "limit": { "context": 1048576, "output": 65536 },
-      "modalities": { "input": ["text","image","pdf"], "output": ["text"] },
-      "variants": {
-        "minimal": { "thinkingLevel": "minimal" }, "low": { "thinkingLevel": "low" },
-        "medium": { "thinkingLevel": "medium" },   "high": { "thinkingLevel": "high" }
-      }
-    },
-    "antigravity-claude-opus-4-6-thinking": {
-      "name": "Claude Opus 4.6 Thinking (Antigravity)",
-      "limit": { "context": 200000, "output": 64000 },
-      "modalities": { "input": ["text","image","pdf"], "output": ["text"] },
-      "variants": { "low": { "thinkingConfig": { "thinkingBudget": 8192 } }, "max": { "thinkingConfig": { "thinkingBudget": 32768 } } }
-    },
-    "antigravity-claude-sonnet-4-6": {
-      "name": "Claude Sonnet 4.6 (Antigravity)",
-      "limit": { "context": 200000, "output": 64000 },
-      "modalities": { "input": ["text","image","pdf"], "output": ["text"] }
+$scriptDir = Split-Path -Parent $PSCommandPath
+$modelsJsonPath = Join-Path $scriptDir "antigravity_models.json"
+
+if (Test-Path $modelsJsonPath) {
+    Write-Ok "Modelos dinamicos encontrados em: $modelsJsonPath"
+    $selectedModels = Get-Content $modelsJsonPath -Raw
+    Write-Host ""
+    Write-Host " Modelos disponiveis (do Antigravity):"
+    try {
+        $modelsObj = $selectedModels | ConvertFrom-Json
+        $modelsObj.PSObject.Properties | ForEach-Object {
+            Write-Host "  - $($_.Value.name)"
+        }
+    } catch {
+        Write-Host "  (lista nao disponivel)"
     }
+} else {
+    Write-Warn "antigravity_models.json nao encontrado - usando fallback"
+    Write-Host ""
+    Write-Host " Quais modelos deseja configurar?"
+    Write-Host " [1] Todos (Gemini 3 Pro/Flash + Claude Opus/Sonnet) - Recomendado"
+    Write-Host " [2] Apenas Gemini (Gemini 3 Pro e Flash)"
+    Write-Host " [3] Apenas Claude (Opus 4.6 Thinking e Sonnet 4.6)"
+    Write-Host ""
+    $modelChoice = Read-Host " Opcao [1/2/3]"
+    if (-not $modelChoice) { $modelChoice = "1" }
+
+    $allModels = @'
+"antigravity-gemini-3-pro": {
+"name": "Gemini 3 Pro (Antigravity)",
+"limit": { "context": 1048576, "output": 65535 },
+"modalities": { "input": ["text","image","pdf"], "output": ["text"] },
+"variants": { "low": { "thinkingLevel": "low" }, "high": { "thinkingLevel": "high" } }
+},
+"antigravity-gemini-3-flash": {
+"name": "Gemini 3 Flash (Antigravity)",
+"limit": { "context": 1048576, "output": 65536 },
+"modalities": { "input": ["text","image","pdf"], "output": ["text"] },
+"variants": {
+"minimal": { "thinkingLevel": "minimal" },
+"low": { "thinkingLevel": "low" },
+"medium": { "thinkingLevel": "medium" },
+"high": { "thinkingLevel": "high" }
+}
+},
+"antigravity-claude-opus-4-6-thinking": {
+"name": "Claude Opus 4.6 Thinking (Antigravity)",
+"limit": { "context": 200000, "output": 64000 },
+"modalities": { "input": ["text","image","pdf"], "output": ["text"] },
+"variants": { "low": { "thinkingConfig": { "thinkingBudget": 8192 } }, "max": { "thinkingConfig": { "thinkingBudget": 32768 } } }
+},
+"antigravity-claude-sonnet-4-6": {
+"name": "Claude Sonnet 4.6 (Antigravity)",
+"limit": { "context": 200000, "output": 64000 },
+"modalities": { "input": ["text","image","pdf"], "output": ["text"] }
+}
 '@
 
-$geminiModels = @'
-    "antigravity-gemini-3-pro": {
-      "name": "Gemini 3 Pro (Antigravity)",
-      "limit": { "context": 1048576, "output": 65535 },
-      "modalities": { "input": ["text","image","pdf"], "output": ["text"] },
-      "variants": { "low": { "thinkingLevel": "low" }, "high": { "thinkingLevel": "high" } }
-    },
-    "antigravity-gemini-3-flash": {
-      "name": "Gemini 3 Flash (Antigravity)",
-      "limit": { "context": 1048576, "output": 65536 },
-      "modalities": { "input": ["text","image","pdf"], "output": ["text"] },
-      "variants": {
-        "minimal": { "thinkingLevel": "minimal" }, "low": { "thinkingLevel": "low" },
-        "medium": { "thinkingLevel": "medium" },   "high": { "thinkingLevel": "high" }
-      }
-    }
+    $geminiModels = @'
+"antigravity-gemini-3-pro": {
+"name": "Gemini 3 Pro (Antigravity)",
+"limit": { "context": 1048576, "output": 65535 },
+"modalities": { "input": ["text","image","pdf"], "output": ["text"] },
+"variants": { "low": { "thinkingLevel": "low" }, "high": { "thinkingLevel": "high" } }
+},
+"antigravity-gemini-3-flash": {
+"name": "Gemini 3 Flash (Antigravity)",
+"limit": { "context": 1048576, "output": 65536 },
+"modalities": { "input": ["text","image","pdf"], "output": ["text"] },
+"variants": {
+"minimal": { "thinkingLevel": "minimal" },
+"low": { "thinkingLevel": "low" },
+"medium": { "thinkingLevel": "medium" },
+"high": { "thinkingLevel": "high" }
+}
+}
 '@
 
-$claudeModels = @'
-    "antigravity-claude-opus-4-6-thinking": {
-      "name": "Claude Opus 4.6 Thinking (Antigravity)",
-      "limit": { "context": 200000, "output": 64000 },
-      "modalities": { "input": ["text","image","pdf"], "output": ["text"] },
-      "variants": { "low": { "thinkingConfig": { "thinkingBudget": 8192 } }, "max": { "thinkingConfig": { "thinkingBudget": 32768 } } }
-    },
-    "antigravity-claude-sonnet-4-6": {
-      "name": "Claude Sonnet 4.6 (Antigravity)",
-      "limit": { "context": 200000, "output": 64000 },
-      "modalities": { "input": ["text","image","pdf"], "output": ["text"] }
-    }
+    $claudeModels = @'
+"antigravity-claude-opus-4-6-thinking": {
+"name": "Claude Opus 4.6 Thinking (Antigravity)",
+"limit": { "context": 200000, "output": 64000 },
+"modalities": { "input": ["text","image","pdf"], "output": ["text"] },
+"variants": { "low": { "thinkingConfig": { "thinkingBudget": 8192 } }, "max": { "thinkingConfig": { "thinkingBudget": 32768 } } }
+},
+"antigravity-claude-sonnet-4-6": {
+"name": "Claude Sonnet 4.6 (Antigravity)",
+"limit": { "context": 200000, "output": 64000 },
+"modalities": { "input": ["text","image","pdf"], "output": ["text"] }
+}
 '@
 
-$selectedModels = switch ($modelChoice) {
-    "2"     { $geminiModels }
-    "3"     { $claudeModels }
-    default { $allModels }
+    $selectedModels = switch ($modelChoice) {
+        "2" { $geminiModels }
+        "3" { $claudeModels }
+        default { $allModels }
+    }
 }
 
 # ---- 7. Criar/atualizar opencode.json ------------------------------------------------------------------------------------
 Write-Step "Criando opencode.json..."
 
-$opencodeJson = "$configDir\opencode.json"
+$opencodeJson = "$configDir\\opencode.json"
 
 # Preserva conteudo existente se houver outras configs
 $existingContent = @{}
@@ -210,19 +245,33 @@ if (Test-Path $opencodeJson) {
     }
 }
 
-$newConfig = @"
+if (Test-Path $modelsJsonPath) {
+    $newConfig = @"
 {
-  "`$schema": "https://opencode.ai/config.json",
-  "plugin": ["opencode-antigravity-auth@latest"],
-  "provider": {
-    "google": {
-      "models": {
-$selectedModels
-      }
-    }
-  }
+"`$schema": "https://opencode.ai/config.json",
+"plugin": ["opencode-antigravity-auth@latest"],
+"provider": {
+"google": {
+"models": $selectedModels
+}
+}
 }
 "@
+} else {
+    $newConfig = @"
+{
+"`$schema": "https://opencode.ai/config.json",
+"plugin": ["opencode-antigravity-auth@latest"],
+"provider": {
+"google": {
+"models": {
+$selectedModels
+}
+}
+}
+}
+"@
+}
 
 Set-Content -Path $opencodeJson -Value $newConfig -Encoding UTF8
 Write-Ok "opencode.json criado"

@@ -1,0 +1,98 @@
+{
+  "timestamp": "2026-04-03T15:47:08.006646",
+  "source": "antigravity_state_db",
+  "models": [
+    "Flash",
+    "Gemini 2.0 Flash",
+    "Gemini 2.0 Pro",
+    "Gemini 3 Flash",
+    "Gemini 3 Pro",
+    "Pro",
+    "gemini-2.0-flash",
+    "gemini-2.0-pro",
+    "gemini-3-flash",
+    "gemini-3-pro",
+    "pro"
+  ],
+  "current_model": "Gemini 3 Flash",
+  "model_config": {
+    "raw_text": "\n\u000eGemini 3 Flash\u0012\u0003\b�\u0007(\u0001X\u0001b\u0006\u0002\u0001\u0005\u0003\u0004\bz\r\r\u0000\u0000�?\u0012\u0006\b����\u0006�\u0001\u0014\n\u0010application/json\u0010\u0001�\u0001\u0013\n\u000fapplication/pdf\u0010\u0001�\u0001\u0013\n\u000fapplication/rtf\u0010\u0001�\u0001\u001c\n\u0018application/x-ipynb+json\u0010\u0001�\u0001\u001c\n\u0018application/x-javascript\u0010\u0001�\u0001\u001d\n\u0019application/x-python-code\u0010\u0001�\u0001\u001c\n\u0018application/x-typescript\u0010\u0001�\u0001\u001a\n\u0016audio/webm;codecs=opus\u0010\u0001�\u0001\u000e\n\nimage/heic\u0010\u0001�\u0001\u000e\n\nimage/heif\u0010\u0001�\u0001\u000e\n\nimage/jpeg\u0010\u0001�\u0001\r\n\timage/png\u0010\u0001�\u0001\u000e\n\nimage/webp\u0010\u0001�\u0001\f\n\btext/css\u0010\u0001�\u0001\f\n\btext/csv\u0010\u0001�\u0001\r\n\ttext/html\u0010\u0001�\u0001\u0013\n\u000ftext/javascript\u0010\u0001�\u0001\u0011\n\rtext/markdown\u0010\u0001�\u0001\u000e\n\ntext/plain\u0010\u0001�\u0001\f\n\btext/rtf\u0010\u0001�\u0001\u0011\n\rtext/x-python\u0010\u0001�\u0001\u0018\n\u0014te",
+    "detected_models": [
+      "Gemini 3 Flash",
+      "Flash"
+    ],
+    "has_gemini_flash": true,
+    "has_gemini_pro": false
+  },
+  "raw_data": {
+    "jetskiStateSync.agentManagerInitState": {
+      "raw_text": "*\u0002(\u00032�\u0003\n�\u0002ya29.a0AUMWg_LgGXUr-wl8akWhCLMSQpz5eXvAN35v7tbntkuGW7eukFQTzH0SzhPg3_gcU1dowtDO4otbv4-1DWBu3iZCCkpPxDkOdGb1h5f8uizTtP4xc0vYTkZbD4-_jvvrDNGdwjkjDs-6fFWk_H72TA6RFVQPe4qPB_Zqsi0cgupZBt8hdkGcl6n20bY91QhT24hOv5Tf8oUjfkMaCgYKAYcSARESFQHGX2Mi1RBu8FB8v1YcKlMUSWbZ7A0214\u0012\u0006Bearer\u001ag1//0h1C_N8H-gStcCgYIARAAGBESNwF-L9IrdL7ZsIEsZjvIM0cg3b_zmH9ALt36Ufib94Wo6fmWzaymBPdc86dLBwYyVuEvQ199Auo\"\u0006\b����\u0006:\u0000J\u0002\b\u0000R4\n$1b5759a0-6b3d-40e8-ab19-14b366f6d31a\u0012\f\b����\u0006\u0010����\u0001R4\n$4d542b33-af38-4882-9add-3dfe076c3f3a\u0012\f\b����\u0006",
+      "detected_models": [
+        "Gemini 3 Pro",
+        "pro",
+        "Flash",
+        "Pro",
+        "Gemini 3 Flash"
+      ],
+      "has_gemini_flash": true,
+      "has_gemini_pro": true
+    },
+    "antigravity.agentViewContainerId.state.hidden": {
+      "raw_text": "�֧�(+j��ɨ\u001e��ڝ�b�x�u��j[\u001e�֧�(+j��ɨ\u001e�Ԣu�ڝ�b�x�u��j[\u001e",
+      "detected_models": [],
+      "has_gemini_flash": false,
+      "has_gemini_pro": false
+    },
+    "productIconThemeData": {
+      "error": "Incorrect padding",
+      "data_type": "protobuf"
+    },
+    "sync.productQuality": {
+      "error": "Incorrect padding",
+      "data_type": "protobuf"
+    },
+    "antigravity_allowed_command_model_configs": {
+      "raw_text": "\n\u000eGemini 3 Flash\u0012\u0003\b�\u0007(\u0001X\u0001b\u0006\u0002\u0001\u0005\u0003\u0004\bz\r\r\u0000\u0000�?\u0012\u0006\b����\u0006�\u0001\u0014\n\u0010application/json\u0010\u0001�\u0001\u0013\n\u000fapplication/pdf\u0010\u0001�\u0001\u0013\n\u000fapplication/rtf\u0010\u0001�\u0001\u001c\n\u0018application/x-ipynb+json\u0010\u0001�\u0001\u001c\n\u0018application/x-javascript\u0010\u0001�\u0001\u001d\n\u0019application/x-python-code\u0010\u0001�\u0001\u001c\n\u0018application/x-typescript\u0010\u0001�\u0001\u001a\n\u0016audio/webm;codecs=opus\u0010\u0001�\u0001\u000e\n\nimage/heic\u0010\u0001�\u0001\u000e\n\nimage/heif\u0010\u0001�\u0001\u000e\n\nimage/jpeg\u0010\u0001�\u0001\r\n\timage/png\u0010\u0001�\u0001\u000e\n\nimage/webp\u0010\u0001�\u0001\f\n\btext/css\u0010\u0001�\u0001\f\n\btext/csv\u0010\u0001�\u0001\r\n\ttext/html\u0010\u0001�\u0001\u0013\n\u000ftext/javascript\u0010\u0001�\u0001\u0011\n\rtext/markdown\u0010\u0001�\u0001\u000e\n\ntext/plain\u0010\u0001�\u0001\f\n\btext/rtf\u0010\u0001�\u0001\u0011\n\rtext/x-python\u0010\u0001�\u0001\u0018\n\u0014te",
+      "detected_models": [
+        "Gemini 3 Flash",
+        "Flash"
+      ],
+      "has_gemini_flash": true,
+      "has_gemini_pro": false
+    },
+    "content.trust.model.key": {
+      "raw_text": "�����-\"w躸���_�����,z�\u0000vh�?'!j�����r�)��h����-��u{\u001b^�v�~)^����\u000fԱ���\u0007f����Z�c�7������h����-��a��Ա���\u0007f����Z�c�7������h����-��^����k��^v��z��'u��a�?�r\u0017�y��z��ם���",
+      "detected_models": [],
+      "has_gemini_flash": false,
+      "has_gemini_pro": false
+    },
+    "antigravityUnifiedStateSync.agentPreferences": {
+      "raw_text": "\n!\n\u0017planningModeSentinelKey\u0012\u0006\n\u0004CAE=\n)\n\u001fartifactReviewPolicySentinelKey\u0012\u0006\n\u0004EAE=\n0\n&terminalAutoExecutionPolicySentinelKey\u0012\u0006\n\u0004EAE=\n,\n\"terminalAllowedCommandsSentinelKey\u0012\u0006\n\u0004IgA=\n+\n!terminalDeniedCommandsSentinelKey\u0012\u0006\n\u0004IgA=\n6\n,allowAgentAccessNonWorkspaceFilesSentinelKey\u0012\u0006\n\u0004CAA=\n5\n+allowCascadeAccessGitignoreFilesSentinelKey\u0012\u0006\n\u0004CAA=\n$\n\u0015secureModeSentinelKey\u0012\u000b\n\u0004CAA=\u0010ƙ�\u0001\n7\n-explainAndFixInCurrentConversationSentinelKey\u0012\u0006\n\u0004CAA=",
+      "detected_models": [],
+      "has_gemini_flash": false,
+      "has_gemini_pro": false
+    },
+    "antigravityUnifiedStateSync.modelPreferences": {
+      "raw_text": "\n0\n&last_selected_agent_model_sentinel_key\u0012\u0006\n\u0004EJcI",
+      "detected_models": [],
+      "has_gemini_flash": false,
+      "has_gemini_pro": false
+    },
+    "antigravityUnifiedStateSync.modelCredits": {
+      "raw_text": "\n(\n\u001eminimumCreditAmountForUsageKey\u0012\u0006\n\u0004EDI=",
+      "detected_models": [],
+      "has_gemini_flash": false,
+      "has_gemini_pro": false
+    },
+    "antigravityUnifiedStateSync.agentManagerWindow": {
+      "raw_text": "\n\u001b\n\u0011managerWindowMode\u0012\u0006\n\u0004EAE=\n\u0016\n\fmanagerWidth\u0012\u0006\n\u0004ELAJ\n\u0017\n\rmanagerHeight\u0012\u0006\n\u0004EKAG\n\u0012\n\bmanagerX\u0012\u0006\n\u0004EOgC\n\u0012\n\bmanagerY\u0012\u0006\n\u0004EHo=",
+      "detected_models": [],
+      "has_gemini_flash": false,
+      "has_gemini_pro": false
+    },
+    "antigravity.profileUrl": {
+      "error": "Invalid base64-encoded string: number of data characters (89) cannot be 1 more than a multiple of 4",
+      "data_type": "protobuf"
+    }
+  }
+}
